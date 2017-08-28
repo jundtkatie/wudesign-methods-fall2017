@@ -1,0 +1,2 @@
+# wudesign-methods-fall2017
+This class is about navigating that delicate line between expectation and surprise. Students will analyze the current use of actions and challenge their common behaviour by creating critical, unexpected, and profound action-driven digital experiences. Rather than use tools to transmit or navigate to content, students will create environments from these actions that encourage play, exploration, participation, and contemplation.
