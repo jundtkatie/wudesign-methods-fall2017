@@ -1,0 +1,76 @@
+<html>
+
+	<head>
+		<title>Explore</title>
+
+		<style>
+			div.fixed-rectangle {
+				width: 25%;
+				height: 25%;
+				display: inline-block;
+				padding: 0px;
+				margin: 0px;
+				float: left;
+			}
+
+			body {
+				padding: 0px;
+				margin: 0px;
+			}
+
+/*			.fixed-rectangle:hover {
+				background-color: white !important;
+			}*/
+
+			.fixed-rectangle {transition: all .2s ease-in-out;}
+			.fixed-rectangle:hover {transform: scale(1.2);}
+
+ 		
+		</style>
+	</head>
+
+	<body> 
+
+ 		<div class="fixed-rectangle" style="background-color: mistyrose; "></div> 
+		<div class="fixed-rectangle" style="background-color: lavenderblush"></div> 
+		<div class="fixed-rectangle" style="background-color: linen"></div> 
+		<div class="fixed-rectangle" style="background-color: antiquewhite"></div> 
+		<div class="fixed-rectangle" style="background-color: ivory"></div> 
+		<div class="fixed-rectangle" style="background-color: floralwhite"></div> 
+		<div class="fixed-rectangle" style="background-color: oldlace"></div> 
+		<div class="fixed-rectangle" style="background-color: beige"></div> 
+		<div class="fixed-rectangle" style="background-color: seashell"></div> 
+		<div class="fixed-rectangle" style="background-color: whitesmoke"></div> 
+		<div class="fixed-rectangle" style="background-color: ghostwhite"></div> 
+		<div class="fixed-rectangle" style="background-color: aliceblue"></div> 
+		<div class="fixed-rectangle" style="background-color: azure"></div> 
+		<div class="fixed-rectangle" style="background-color: mintcream"></div> 
+		<div class="fixed-rectangle" style="background-color: honeydew"></div> 
+		<div class="fixed-rectangle" style="background-color: snow"></div> 
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script>
+$( ".fixed-rectangle" ).click(function() {
+  $(this).css("background-color", getRandomColor());
+});
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#FFFF';
+  for (var i = 0; i < 2; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+
+}
+</script>
+
+	</body>
+
+
+
+
+
+</html> 
