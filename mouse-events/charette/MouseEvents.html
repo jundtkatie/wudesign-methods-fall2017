@@ -65,8 +65,8 @@
 		<div class="box37">37</div> 
 		<div class="box38">38</div> 
 		<div class="box39">39</div> 
-		
-		<!-- <div class="box40">40</div>
+
+		<div class="box40">40</div>
 		<div class="box41">41</div> 
 		<div class="box42">42</div> 
 		<div class="box43">43</div> 
@@ -122,24 +122,25 @@
 		<div class="box93">93</div> 
 		<div class="box94">94</div> 
 		<div class="box95">95</div> 
-		<div class="box96">96</div>  -->
+		<div class="box96">96</div> 
 
 
 
-<!-- BOX 1 --> <script>
-$( ".box1" ).click(function() {
-  $(this).css("background-color", getRandomColor());
-});
+<!-- BOX 1 --> 
+	<script>
+	$( ".box1" ).click(function() {
+	  $(this).css("background-color", getRandomColor());
+	});
 
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#F';
-  for (var i = 0; i < 5; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-</script>
+	function getRandomColor() {
+	  var letters = '0123456789ABCDEF';
+	  var color = '#F';
+	  for (var i = 0; i < 5; i++) {
+	    color += letters[Math.floor(Math.random() * 16)];
+	  }
+	  return color;
+	}
+	</script>
 
 <!-- BOX 2 -->
 	<script>
@@ -155,157 +156,166 @@ function getRandomColor() {
 	}); 
 	</script>
 
-<!-- BOX 4 --> <script>
-$( ".box4" ).click(function() {
-  $(this).css("background-color", getRandomColor());
-});
+<!-- BOX 4 -->
+	<script>
+	$( ".box4" ).click(function() {
+	  $(this).css("background-color", getRandomColor());
+	});
 
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#F';
-  for (var i = 0; i < 5; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
+	function getRandomColor() {
+	  var letters = '0123456789ABCDEF';
+	  var color = '#F';
+	  for (var i = 0; i < 5; i++) {
+	    color += letters[Math.floor(Math.random() * 16)];
+	  }
+	  return color;
+	}
+	</script>
 
-}
-</script>
+<!-- BOX 5 -->
+	<script>
+	$( ".box5" ).click(function() {
+	  $(this).css("background-color", "whitesmoke");
+	});
+	</script>
 
-<!-- BOX 5 --> <script>
-$( ".box5" ).click(function() {
-  $(this).css("background-color", "whitesmoke");
-});
-</script>
-
-<!-- BOX 6 --> <script>
-$( ".box6" ).click(function() {
-  $(this).css("background-color", "yellow");
-});
-</script>
+<!-- BOX 6 -->
+	<script>
+	$( ".box6" ).click(function() {
+	  $(this).css("background-color", "yellow");
+	});
+	</script>
 
 <!-- BOX 7 - - - Why can't I get the toggle class on this one to work?-->
-<script>
-$( ".box7" ).click(function() {
-  $(this).toggleClass("red");
-});
-</script>
-
-<!-- BOX 8 --> <script>
-$( ".box8" ).click(function() {
-		var leng = Math.floor(10+ Math.random() * 500);
-		var widt = Math.floor(10+ Math.random() * 500);
-		 $( this ).width( widt ).addClass( "morph" );
-		 $( this ).height( leng ).addClass( "morph" );
-		console.log("hello");
-		var colorR = Math.floor((Math.random() * 256));
-     	var colorG = Math.floor((Math.random() * 256));
-     	var colorB = Math.floor((Math.random() * 256));
-		$(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+	<script>
+	$( ".box7" ).click(function() {
+	  $(this).toggleClass("red");
 	});
+	</script>
 
-</script>
+<!-- BOX 8 -->
+	<script>
+	$( ".box8" ).click(function() {
+			var leng = Math.floor(10+ Math.random() * 500);
+			var widt = Math.floor(10+ Math.random() * 500);
+			 $( this ).width( widt ).addClass( "morph" );
+			 $( this ).height( leng ).addClass( "morph" );
+			console.log("hello");
+			var colorR = Math.floor((Math.random() * 256));
+	     	var colorG = Math.floor((Math.random() * 256));
+	     	var colorB = Math.floor((Math.random() * 256));
+			$(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+		});
 
-<!-- BOX 9 --><script>
-$( ".box9" ).click(function() {
-		var leng = Math.floor(10+ Math.random() * 500);
-		var widt = Math.floor(10+ Math.random() * 500);
-		 $( this ).width( widt ).addClass( "morph" );
-		 $( this ).height( leng ).addClass( "morph" );
-		console.log("hello");
-		var colorR = Math.floor((Math.random() * 256));
-     	var colorG = Math.floor((Math.random() * 256));
-     	var colorB = Math.floor((Math.random() * 256));
-		$(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
-	});
+	</script>
 
-</script>
+<!-- BOX 9 -->
+	<script>
+	$( ".box9" ).click(function() {
+			var leng = Math.floor(10+ Math.random() * 500);
+			var widt = Math.floor(10+ Math.random() * 500);
+			 $( this ).width( widt ).addClass( "morph" );
+			 $( this ).height( leng ).addClass( "morph" );
+			console.log("hello");
+			var colorR = Math.floor((Math.random() * 256));
+	     	var colorG = Math.floor((Math.random() * 256));
+	     	var colorB = Math.floor((Math.random() * 256));
+			$(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+		});
 
-<!-- BOX 10 --><script>
-$( ".box10" ).click(function() {
-		var leng = Math.floor(10+ Math.random() * 500);
-		var widt = Math.floor(10+ Math.random() * 500);
-		 $( this ).width( widt ).addClass( "morph" );
-		 $( this ).height( leng ).addClass( "morph" );
-		console.log("hello");
-		
-	});
+	</script>
 
-</script>
+<!-- BOX 10 -->
+	<script>
+	$( ".box10" ).click(function() {
+			var leng = Math.floor(10+ Math.random() * 500);
+			var widt = Math.floor(10+ Math.random() * 500);
+			 $( this ).width( widt ).addClass( "morph" );
+			 $( this ).height( leng ).addClass( "morph" );
+			console.log("hello");
+			
+		});
 
-<!-- BOX 11 --><script>
-	$( ".box11" ).click(function() {
-		var size = Math.floor(10+ Math.random() * 200);
-		 $(this).css('font-size', size);
-	});
-</script>
+	</script>
 
-<!-- BOX 12 --><script>
-	$( ".box12" ).click(function() {
-		var size = Math.floor(10+ Math.random() * -5);
-		 $(this).css('font-size', size);
-	});
-</script>
+<!-- BOX 11 -->
+		<script>
+		$( ".box11" ).click(function() {
+			var size = Math.floor(10+ Math.random() * 200);
+			 $(this).css('font-size', size);
+		});
+		</script>
 
-<!-- BOX 13 --><script>
-	$( ".box13" ).click(function() {
-		 $(this).css('font-size', "800px");
-	});
-</script>
+<!-- BOX 12 -->
+	<script>
+		$( ".box12" ).click(function() {
+			var size = Math.floor(10+ Math.random() * -5);
+			 $(this).css('font-size', size);
+		});
+	</script>
+
+<!-- BOX 13 -->
+	<script>
+		$( ".box13" ).click(function() {
+			 $(this).css('font-size', "800px");
+		});
+	</script>
 
 <!-- BOX 14 - - - transition wont work-->
-<script>
-        $( ".box14" ).click(function() {
-          $(this).toggleClass("selected");
-        });
-</script>
+	<script>
+	        $( ".box14" ).click(function() {
+	          $(this).toggleClass("selected");
+	        });
+	</script>
 
 <!-- BOX 15 - - - can't get transition to work... make another item for the transition-->
-<script>
-        $( ".box15" ).click(function() {
-          $(this).toggleClass("selected");
-        });
-</script>
+	<script>
+	        $( ".box15" ).click(function() {
+	          $(this).toggleClass("selected");
+	        });
+	</script>
 
 <!-- BOX 16 - - - can't get it to rotate? -->
-<script>
-	$(".box16").click(function(){
-          $(this).toggleClass("selected");
-        });
-</script>
+	<script>
+		$(".box16").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
 
-<!-- BOX 17 --><script>
-	$(".box17").click(function(){
-          $(this).toggleClass("selected");
-        });
-</script>
+<!-- BOX 17 -->
+	<script>
+		$(".box17").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
 
 <!-- BOX 18 animation wont work-->
-<script>
-	$(".box18").click(function(){
-          $(this).toggleClass("selected");
-        });
-</script>
+	<script>
+		$(".box18").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
 
 <!-- BOX 19 animation wont work... I can turn this one into two items-->
-<script>
-	$(".box19").click(function(){
-          $(this).toggleClass("selected");
-        });
-</script>
+	<script>
+		$(".box19").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
 
 <!-- BOX 20 animation wont work...-->
-<script>
-	$(".box20").click(function(){
-          $(this).toggleClass("selected");
-        });
-</script>
+	<script>
+		$(".box20").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
 
 <!-- BOX 21 animation wont work...-->
-<script>
-	$(".box21").click(function(){
-          $(this).toggleClass("selected");
-        });
-</script>
+	<script>
+		$(".box21").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
 
 <!-- BOX 22 - - - animation wont work-->
 	<script>
@@ -333,33 +343,35 @@ $( ".box10" ).click(function() {
 		});
 	</script>
 
-<!-- BOX 24 - - - animation (spinning) wont work--><script>
-$( ".box24" ).click(function() {
-		 $(this).toggleClass("animated");
-     	if ($( this ).hasClass( "animated" )) {
-     			$(this).css("border-bottom", "300px solid rgb(" + colorR + "," + colorG + "," + colorB + ")");
-     	} else {
-     		$(this).css("border-bottom", "0px solid blue");
-     	}
-		
-	});
-	$('*').on('click', function(event){
-		console.log(event);
-	});
-</script>
+<!-- BOX 24 - - - animation (spinning) wont work-->
+	<script>
+	$( ".box24" ).click(function() {
+			 $(this).toggleClass("animated");
+	     	if ($( this ).hasClass( "animated" )) {
+	     			$(this).css("border-bottom", "300px solid rgb(" + colorR + "," + colorG + "," + colorB + ")");
+	     	} else {
+	     		$(this).css("border-bottom", "0px solid blue");
+	     	}
+			
+		});
+		$('*').on('click', function(event){
+			console.log(event);
+		});
+	</script>
 
-<!-- BOX 25 --><script>
-$( ".box25" ).click(function() {
-		 $(this).toggleClass("animated");
-     	if ($( this ).hasClass( "animated" )) {
-     		$(this).css("border-bottom", "300px solid ivory");
-     	}
-		
-	});
-	$('*').on('click', function(event){
-		console.log(event);
-	});
-</script>
+<!-- BOX 25 -->
+	<script>
+	$( ".box25" ).click(function() {
+			 $(this).toggleClass("animated");
+	     	if ($( this ).hasClass( "animated" )) {
+	     		$(this).css("border-bottom", "300px solid ivory");
+	     	}
+			
+		});
+		$('*').on('click', function(event){
+			console.log(event);
+		});
+	</script>
 
 <!-- BOX 26 -->
 	<script>
@@ -375,13 +387,14 @@ $( ".box25" ).click(function() {
 	});
 	</script>
 
-<!-- BOX 27 --><script>
-$( "#box27" ).click(function() {
-  $( this ).animate({
-    opacity: 0,
-  }, 5000 ); 
-});
-</script>
+<!-- BOX 27 -->
+	<script>
+	$( "#box27" ).click(function() {
+	  $( this ).animate({
+	    opacity: 0,
+	  }, 5000 ); 
+	});
+	</script>
 
 <!-- BOX 28 -->
 	<script>
@@ -481,7 +494,7 @@ $( "#box27" ).click(function() {
 <!-- BOX 36 -->
 	<script>
 	for ( var i = 0; i < 5; i++ ) {
-	  $( "<.box36>" ).appendTo( document.body );
+	  $( ".box36" ).appendTo( document.body );
 	}
 	$( ".box36" ).click(function() {
 	  $( this ).hide( 2000, function() {
@@ -493,7 +506,7 @@ $( "#box27" ).click(function() {
 <!-- BOX 37 -->
 	<script>
 		for ( var i = 0; i < 5; i++ ) {
-	  		$( "<.box37>" ).appendTo( document.body );
+	  		$( ".box37" ).appendTo( document.body );
 		}
 		$( ".box37" ).click(function() {
 	  		$( this ).hide( 500, function() {
