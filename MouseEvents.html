@@ -1,0 +1,600 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<script src="scripts.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+		<title>Mouse Events</title>
+
+		<style>
+			
+		</style>
+
+	</head>
+
+
+<body> 
+
+ 		<div class="box1">1</div> 
+		<div class="box2">
+			<button onclick="myFunction()">Click me</button>
+			<p id="boxtwo"></p></div> 
+		<div class="box3">click here to make this box vanish</div> 
+		<div class="box4">4</div> 
+		<div class="box5">5</div> 
+		<div class="box6">6</div> 
+<div class="box7">7</div> 
+		<div class="box8" id="box8">8</div> 
+		<div class="box9" id="box9">9</div>
+		<div class="box10" id="box10">10</div> 
+		<div class="box11">11</div> 
+		<div class="box12">12</div> 
+		<div class="box13">13</div> 
+<div class="box14">14</div> 
+<div class="box15">15</div> 
+<div class="box16">16</div> 
+		<div class="box17">17</div> 
+		<div class="box18">18</div> 
+		<div class="box19">19</div> 
+		<div class="box20">20</div> 
+		<div class="box21">21</div> 
+		<div class="box22">22</div> 
+		<div class="box23">23</div> 
+		<div class="box24">24</div> 
+		<div class="box25">25</div> 
+		<div class="box26" id="box26">26</div> 
+		<div class="box27" id="box27">27</div> 
+		<div class="box28" id="box28">28</div> 
+		<div class="box29" id="box29">29</div> 
+		<div class="box30" id="box30">30</div> 
+		<div class="box31" id="box31">31</div> 
+		<div class="box32">32</div> 
+		<div class="box33">33</div> 
+		<div class="box34">34</div>
+		<div class="box35">
+			<button id="hider">Hide</button>
+			<button id="shower">Show</button>
+			<div>
+			  <span>I'm</span> <span>trying</span> <span>really</span>
+			  <span>hard</span> <span>to</span> <span>figure</span>
+			  <span>javascript</span> <span>out...</span>
+			</div>
+			</div>
+		<div class="box36">36</div> 
+		<div class="box37">37</div> 
+		<div class="box38">38</div> 
+		<div class="box39">39</div> 
+
+		<div class="box40">40</div>
+		<div class="box41">41</div> 
+		<div class="box42">42</div> 
+		<div class="box43">43</div> 
+		<div class="box44">44</div> 
+		<div class="box45">45</div> 
+		<div class="box46">46</div> 
+		<div class="box47">47</div> 
+		<div class="box48">48</div> 
+		<div class="box49">49</div> 
+		<div class="box50">50</div>  
+		<div class="box51">51</div> 
+		<div class="box52">52</div> 
+		<div class="box53">53</div> 
+		<div class="box54">54</div> 
+		<div class="box55">55</div> 
+		<div class="box56">56</div> 
+		<div class="box57">57</div> 
+		<div class="box58">58</div> 
+		<div class="box59">59</div> 
+		<div class="box60">60</div> 
+		<div class="box61">61</div> 
+		<div class="box62">62</div> 
+		<div class="box63">63</div> 
+		<div class="box64">64</div> 
+		<div class="box65">65</div> 
+		<div class="box66">66</div> 
+		<div class="box67">67</div> 
+		<div class="box68">68</div> 
+		<div class="box69">69</div> 
+		<div class="box70">70</div> 
+		<div class="box71">71</div> 
+		<div class="box72">72</div> 
+		<div class="box73">73</div> 
+		<div class="box74">74</div> 
+		<div class="box75">75</div> 
+		<div class="box76">76</div> 
+		<div class="box77">77</div> 
+		<div class="box78">78</div> 
+		<div class="box79">79</div> 
+		<div class="box80">80</div> 
+		<div class="box81">81</div> 
+		<div class="box82">82</div> 
+		<div class="box83">83</div> 
+		<div class="box84">84</div> 
+		<div class="box85">85</div> 
+		<div class="box86">86</div> 
+		<div class="box87">87</div> 
+		<div class="box88">88</div> 
+		<div class="box89">89</div> 
+		<div class="box90">90</div> 
+		<div class="box91">91</div> 
+		<div class="box92">92</div> 
+		<div class="box93">93</div> 
+		<div class="box94">94</div> 
+		<div class="box95">95</div> 
+		<div class="box96">96</div> 
+
+
+
+<!-- BOX 1 --> 
+	<script>
+	$( ".box1" ).click(function() {
+	  $(this).css("background-color", getRandomColor());
+	});
+
+	function getRandomColor() {
+	  var letters = '0123456789ABCDEF';
+	  var color = '#F';
+	  for (var i = 0; i < 5; i++) {
+	    color += letters[Math.floor(Math.random() * 16)];
+	  }
+	  return color;
+	}
+	</script>
+
+<!-- BOX 2 -->
+	<script>
+	function myFunction() {
+	    document.getElementById("boxtwo").innerHTML = "Taa-Daa!";
+	}
+	</script>
+
+<!-- BOX 3 -->
+	<script> $( ".box3" ).click(function( event ) {
+	  event.preventDefault();
+	  $( this ).hide(); 
+	}); 
+	</script>
+
+<!-- BOX 4 -->
+	<script>
+	$( ".box4" ).click(function() {
+	  $(this).css("background-color", getRandomColor());
+	});
+
+	function getRandomColor() {
+	  var letters = '0123456789ABCDEF';
+	  var color = '#F';
+	  for (var i = 0; i < 5; i++) {
+	    color += letters[Math.floor(Math.random() * 16)];
+	  }
+	  return color;
+	}
+	</script>
+
+<!-- BOX 5 -->
+	<script>
+	$( ".box5" ).click(function() {
+	  $(this).css("background-color", "whitesmoke");
+	});
+	</script>
+
+<!-- BOX 6 -->
+	<script>
+	$( ".box6" ).click(function() {
+	  $(this).css("background-color", "yellow");
+	});
+	</script>
+
+<!-- BOX 7 - - - Why can't I get the toggle class on this one to work?-->
+	<script>
+	$( ".box7" ).click(function() {
+	  $(this).toggleClass("red");
+	});
+	</script>
+
+<!-- BOX 8 -->
+	<script>
+	$( ".box8" ).click(function() {
+			var leng = Math.floor(10+ Math.random() * 500);
+			var widt = Math.floor(10+ Math.random() * 500);
+			 $( this ).width( widt ).addClass( "morph" );
+			 $( this ).height( leng ).addClass( "morph" );
+			console.log("hello");
+			var colorR = Math.floor((Math.random() * 256));
+	     	var colorG = Math.floor((Math.random() * 256));
+	     	var colorB = Math.floor((Math.random() * 256));
+			$(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+		});
+
+	</script>
+
+<!-- BOX 9 -->
+	<script>
+	$( ".box9" ).click(function() {
+			var leng = Math.floor(10+ Math.random() * 500);
+			var widt = Math.floor(10+ Math.random() * 500);
+			 $( this ).width( widt ).addClass( "morph" );
+			 $( this ).height( leng ).addClass( "morph" );
+			console.log("hello");
+			var colorR = Math.floor((Math.random() * 256));
+	     	var colorG = Math.floor((Math.random() * 256));
+	     	var colorB = Math.floor((Math.random() * 256));
+			$(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+		});
+
+	</script>
+
+<!-- BOX 10 -->
+	<script>
+	$( ".box10" ).click(function() {
+			var leng = Math.floor(10+ Math.random() * 500);
+			var widt = Math.floor(10+ Math.random() * 500);
+			 $( this ).width( widt ).addClass( "morph" );
+			 $( this ).height( leng ).addClass( "morph" );
+			console.log("hello");
+			
+		});
+
+	</script>
+
+<!-- BOX 11 -->
+		<script>
+		$( ".box11" ).click(function() {
+			var size = Math.floor(10+ Math.random() * 200);
+			 $(this).css('font-size', size);
+		});
+		</script>
+
+<!-- BOX 12 -->
+	<script>
+		$( ".box12" ).click(function() {
+			var size = Math.floor(10+ Math.random() * -5);
+			 $(this).css('font-size', size);
+		});
+	</script>
+
+<!-- BOX 13 -->
+	<script>
+		$( ".box13" ).click(function() {
+			 $(this).css('font-size', "800px");
+		});
+	</script>
+
+<!-- BOX 14 - - - transition wont work-->
+	<script>
+	        $( ".box14" ).click(function() {
+	          $(this).toggleClass("selected");
+	        });
+	</script>
+
+<!-- BOX 15 - - - can't get transition to work... make another item for the transition-->
+	<script>
+	        $( ".box15" ).click(function() {
+	          $(this).toggleClass("selected");
+	        });
+	</script>
+
+<!-- BOX 16 - - - can't get it to rotate? -->
+	<script>
+		$(".box16").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
+
+<!-- BOX 17 -->
+	<script>
+		$(".box17").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
+
+<!-- BOX 18 animation wont work-->
+	<script>
+		$(".box18").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
+
+<!-- BOX 19 animation wont work... I can turn this one into two items-->
+	<script>
+		$(".box19").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
+
+<!-- BOX 20 animation wont work...-->
+	<script>
+		$(".box20").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
+
+<!-- BOX 21 animation wont work...-->
+	<script>
+		$(".box21").click(function(){
+	          $(this).toggleClass("selected");
+	        });
+	</script>
+
+<!-- BOX 22 - - - animation wont work-->
+	<script>
+	$( ".box22" ).click(function() {
+			 $(this).toggleClass("animated");
+	     	if ($( this ).hasClass( "animated" )) {
+	     			$(this).css("border-bottom", "300px solid rgb(" + colorR + "," + colorG + "," + colorB + ")");
+	     	} else {
+	     		$(this).css("border-bottom", "0px solid blue");
+	     	}
+			
+		});
+		$('*').on('click', function(event){
+			console.log(event);
+		});
+	</script>
+
+<!-- BOX 23 animation wont work-->
+	<script>
+	$( ".box23" ).click(function() {
+			 $(this).toggleClass("animated");
+	     	if ($( this ).hasClass( "animated" )) {
+	     		$(this).css("border-bottom", "300px solid linen");
+	     	}
+		});
+	</script>
+
+<!-- BOX 24 - - - animation (spinning) wont work-->
+	<script>
+	$( ".box24" ).click(function() {
+			 $(this).toggleClass("animated");
+	     	if ($( this ).hasClass( "animated" )) {
+	     			$(this).css("border-bottom", "300px solid rgb(" + colorR + "," + colorG + "," + colorB + ")");
+	     	} else {
+	     		$(this).css("border-bottom", "0px solid blue");
+	     	}
+			
+		});
+		$('*').on('click', function(event){
+			console.log(event);
+		});
+	</script>
+
+<!-- BOX 25 -->
+	<script>
+	$( ".box25" ).click(function() {
+			 $(this).toggleClass("animated");
+	     	if ($( this ).hasClass( "animated" )) {
+	     		$(this).css("border-bottom", "300px solid ivory");
+	     	}
+			
+		});
+		$('*').on('click', function(event){
+			console.log(event);
+		});
+	</script>
+
+<!-- BOX 26 -->
+	<script>
+	$( "#box26" ).click(function() {
+	  $( this ).animate({
+	    width: "100%",
+	    height: "100%",
+	    opacity: 0.2,
+	    marginLeft: "0px",
+	    fontSize: "3em",
+	    borderWidth: "0px"
+	  }, 5000 ); 
+	});
+	</script>
+
+<!-- BOX 27 -->
+	<script>
+	$( "#box27" ).click(function() {
+	  $( this ).animate({
+	    opacity: 0,
+	  }, 5000 ); 
+	});
+	</script>
+
+<!-- BOX 28 -->
+	<script>
+	$( "#box28" ).click(function() {
+	  $( this ).animate({
+	    width: "50%",
+	    height: "50%",
+	    marginLeft: "0px",
+	  }, 5000 ); 
+	});
+	</script>
+
+<!-- BOX 29 -->
+	<script>
+	$( "#box29" ).click(function() {
+	  $( this ).animate({
+	    width: "3%",
+	  }, 5000 ); 
+	});
+	</script>
+
+<!-- BOX 30 -->
+	<script>
+	$( "#box30" ).click(function() {
+	  $( this ).animate({
+	    height: "3%",
+	  }, 5000 ); 
+	});
+	</script>
+
+<!-- BOX 31 -->
+	<script>
+	$( "#box31" ).click(function() {
+	  $( this ).animate({
+	    width: "2%",
+	    height: "1%",
+	    fontSize: "0.2em"
+	  }, 2000 ); 
+	});
+	</script>
+
+<!-- BOX 32 -->
+	<script>
+	$( ".box32" ).click(function() {
+	  $( this ).animate({
+	    fontSize: "0.2em"
+	  }, 2000 ); 
+	});
+	</script>
+
+<!-- BOX 33 -->
+	<script>
+	$( ".box33" ).click(function() {
+	  $( this ).animate({
+	    width: "70%",
+	    height: "70%",
+	    opacity: 1,
+	    marginLeft: "0.4in",
+	    fontSize: "13em",
+	    borderWidth: "10px"
+	  }, 2000 ); 
+	});
+	</script>
+
+<!-- BOX 34 -->
+	<script>
+	$( ".box34" ).click(function() {
+	  $( this ).animate({
+	    width: "70%",
+	    height: "70%",
+	    opacity: 1,
+	    marginLeft: "0.4in",
+	    fontSize: "3em",
+	    borderWidth: "10px"
+	  }, 1500 );
+	});
+
+
+	$( "*" ).click(function() {
+		$( "this" ).toggle();
+	});
+	</script>
+
+<!-- BOX 35 -->
+	<script>
+	$( "#hider" ).click(function() {
+	  $( "span:last-child" ).hide( "fast", function() {
+	    // Use arguments.callee so we don't need a named function
+	    $( this ).prev().hide( "fast", arguments.callee );
+	  });
+	  $( "#shower" ).click(function() {
+  $( "span" ).show( 2000 );
+	});
+	});
+	</script>
+
+<!-- BOX 36 -->
+	<script>
+	for ( var i = 0; i < 5; i++ ) {
+	  $( ".box36" ).appendTo( document.body );
+	}
+	$( ".box36" ).click(function() {
+	  $( this ).hide( 2000, function() {
+	    $( this ).remove();
+	  });
+	});
+	</script>
+
+<!-- BOX 37 -->
+	<script>
+		for ( var i = 0; i < 5; i++ ) {
+	  		$( ".box37" ).appendTo( document.body );
+		}
+		$( ".box37" ).click(function() {
+	  		$( this ).hide( 500, function() {
+	    	$( this ).remove();
+	  	});
+		});
+	</script>
+
+<!-- BOX 38 -->
+	<script>
+	$( ".box38" ).click(function() {
+		$( this ).slideUp();
+	});
+
+	$( ".target" ).hide();
+	</script>
+
+<!-- BOX 39 -->
+	<script>
+	$( ".box39" ).click(function() {
+		$( this ).slideUp();
+	});
+
+	$( ".target" ).hide();
+	</script>
+
+<!-- BOX 40 -->
+
+<!-- BOX 41 -->
+<!-- BOX 42 -->
+<!-- BOX 43 -->
+<!-- BOX 44 -->
+<!-- BOX 45 -->
+<!-- BOX 46 -->
+<!-- BOX 47 -->
+<!-- BOX 48 -->
+<!-- BOX 49 -->
+<!-- BOX 50 -->
+<!-- BOX 51 -->
+<!-- BOX 52 -->
+<!-- BOX 53 -->
+<!-- BOX 54 -->
+<!-- BOX 55 -->
+<!-- BOX 56 -->
+<!-- BOX 57 -->
+<!-- BOX 58 -->
+<!-- BOX 59 -->
+<!-- BOX 60 -->
+<!-- BOX 61 -->
+<!-- BOX 62 -->
+<!-- BOX 63 -->
+<!-- BOX 64 -->
+<!-- BOX 65 -->
+<!-- BOX 66 -->
+<!-- BOX 67 -->
+<!-- BOX 68 -->
+<!-- BOX 69 -->
+<!-- BOX 70 -->
+<!-- BOX 71 -->
+<!-- BOX 72 -->
+<!-- BOX 73 -->
+<!-- BOX 74 -->
+<!-- BOX 75 -->
+<!-- BOX 76 -->
+<!-- BOX 77 -->
+<!-- BOX 78 -->
+<!-- BOX 79 -->
+<!-- BOX 80 -->
+<!-- BOX 81 -->
+<!-- BOX 82 -->
+<!-- BOX 83 -->
+<!-- BOX 84 -->
+<!-- BOX 85 -->
+<!-- BOX 86 -->
+<!-- BOX 87 -->
+<!-- BOX 88 -->
+<!-- BOX 89 -->
+<!-- BOX 90 -->
+<!-- BOX 91 -->
+<!-- BOX 92 -->
+<!-- BOX 93 -->
+<!-- BOX 94 -->
+<!-- BOX 95 -->
+<!-- BOX 96 -->
+
+
+
+
+
+</body>
+</html> 
