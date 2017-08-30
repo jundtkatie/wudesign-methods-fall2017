@@ -1,0 +1,38 @@
+<html>
+
+	<head>
+		<title>Mouse Events</title>
+
+		<style>
+			p {
+				font-size: 50px;
+				padding-top: 80%;
+				padding-left: 80%;
+
+			}
+		</style>
+	</head>
+
+<body>
+
+<p style="background-color: red;">red</p>
+<p class="blue" style="display: none; background-color: blue;">blue</p>
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<!-- <script>
+$( "#red" ).click(function() {
+  $( "p" ).toggle();
+});
+</script> -->
+
+<script>
+$( "p" ).click(function() {
+  $( "p" ).toggle();
+});
+</script>
+
+</body>
+</html>
