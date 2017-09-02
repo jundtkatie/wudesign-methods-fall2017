@@ -21,12 +21,20 @@ div {
 	.box2 p {
 		font-size: 100px;
 	}
+	.box2.selected {
+		background-color: white;
+	}
 
 .box3 {
 	background-color: linen;
-	font-size: 15px;
-	cursor: pointer;
-}
+	transition-timing-function: ease-in-out;
+	transition: 0.3s;
+	}
+	.box3.selected {
+		background-color: blue;
+		width: 40%;
+		transform:skewY(70deg);
+	}
 
 .box4 {
 	background-color: antiquewhite;
@@ -35,20 +43,31 @@ div {
 
 .box5 {
 	background-color: ivory;
-	cursor: pointer;
+	transition: 5s;
 	font-size: 15px;
+}
+.box5.selected {
+	background-color: pink;
+
 }
 
 .box6 {
 	background-color: floralwhite;
 	transition: 1.5s;
 	cursor: pointer;
-}
+	}
+	.box6.selected {
+    	transform:rotate(90deg);
+    	background-color: yellow;
+	}
 
 .box7 {
 	background-color: oldlace;
 	cursor: pointer;
-}
+	}
+	.box7.red {
+		  background-color: red;
+		}
 
 .box8 {
 	display:flex;
@@ -62,11 +81,6 @@ div {
 	    cursor: pointer;
 	    transition: 0.2s;
 	}
-	.morph{
-		background: blue;
-	    cursor: pointer;
-	    transition: 0.2s;
-}
 
 .box9 {
 	background-color: seashell;
@@ -77,7 +91,7 @@ div {
 	align-items:center;
 	}
 	#box9 {
-		background: beige;
+		background: seashell;
 	    cursor: pointer;
 	    transition: 5s;
 }
@@ -91,7 +105,7 @@ div {
 	align-items:center;
 	}
 	#box10 {
-		background: beige;
+		background: whitesmoke;
 	    cursor: pointer;
 	    transition: 1.5s;
 }
@@ -109,36 +123,30 @@ div {
 
 .box13 {
 	background-color: azure;
-
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
 	font-size: 15px;
-}
+	}
+	.box13.selected {
+		font-size: 800px;
+	}
 
 .box14 {
 	background-color: mintcream;
 	cursor: pointer;
+	transition: all 2s;
 	}
-	@keyframes box14 {
-	  from {border-radius: 0px;}
-	  to {border-radius: 100px;}
-	  }
 	.box14.selected {
 	  background-color: green;
-	  animation-name: box;
-	  animation-duration: .25s;
 	  border-radius: 100px;
 }
 
 .box15 {
 	background-color: honeydew;
 	cursor: pointer;
+	transition: 1s;
 	}
-	@keyframes box15 {
-	  from {border-radius: 0px;}
-	  to {border-radius: 200px;}
-	  }
 	.box15.selected {
 	  background-color: honeydew;
 	  animation-name: box;
@@ -156,7 +164,7 @@ div {
 	  animation-duration: .25s;
 	  transform:rotate(360deg);
 	}
-	@keyframes box16 {
+	@keyframes sixteen {
 	  from {transform: rotate(0deg);}
 	  to {transform: rotate(360deg);}
 }
@@ -186,7 +194,7 @@ div {
 	  to {position: relative; right:50px; bottom: 150px;}
 	}
 	.box18.selected {
-	  animation-name: seventeen;
+	  animation-name: eightteen;
 	  animation-duration: 2s;
 	  position: relative;
 	  right: 50px;
@@ -196,26 +204,27 @@ div {
 .box19 {
 	background-color: mintcream;
 	display: inline-block;
+	-webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
 	}
-	@keyframes box19 {
-	  from {width: 60%; padding-left: 20%; padding-right: 20%;}
-	  to {width: 0%; padding-left: 50%; padding-right: 50%;}
+
+	.box19:hover {
+    width: 300px;
 	}
 	.box19.selected {
-	  animation-name: nineteen;
-	  animation-duration: 2s;
 	  width: 0%;
 	  padding-left: 50%;
 	  padding-right: 50%;
-}
+	}
 
 .box20 {
 	background-color: whitesmoke;
 	display: inline-block;
+	-webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
 	}
-	@keyframes box20 {
-	  from {width: 60%; font-size: 12pt;}
-	  to {width: 0%; font-size: 0pt;}
+	.box20:hover {
+    width: 60%;
 	}
 	.box20.selected {
 	  animation-name: twenty;
@@ -228,7 +237,7 @@ div {
 	background-color: mistyrose;
 	display: inline-block;
 	}
-	@keyframes box21 {
+	@keyframes twentyone {
 	  0%   {width: 20%; font-size: 12pt;}
 	  25%  {width: 10%; font-size: 4pt;}
 	  50%  {width: 20%; font-size: 4pt; transform: rotate(180deg)}
@@ -250,17 +259,11 @@ div {
 	}
 	.box22:hover {
 		cursor: pointer;
-		top: 18%;
 	}
 	.animated{
-			-webkit-animation: spin 1s infinite linear;
-	     animation: spin 1s infinite linear;
-	     transition: 0.6s;
+	     transform: rotate(360deg);
 		}
-	@keyframes  spin {
-	       0%  {-webkit-transform: rotate(0deg);}
-	    100% {-webkit-transform: rotate(360deg);}  
-}
+
 
 .box23 {
 	background-color: linen;
@@ -268,32 +271,24 @@ div {
 	display: inline-block;
 	transition: 0.6s;
 	}
-	.box23:hover {
-		cursor: pointer;
-	}
+
 	.animated{
-			-webkit-animation: spin 1s infinite linear;
-	     animation: spin 1s infinite linear;
-	     transition: 0.6s;
+	     transform: rotate(360deg) infinite linear;
 		}
-	@keyframes  spin {
-	       0%  {-webkit-transform: rotate(0deg);}
-	    100% {-webkit-transform: rotate(360deg);}  
-}
 
 .box24 {
 	background-color: linen;
 	position: relative;
 	display: inline-block;
-	transition: 0.6s;
+	transition: 5s;
 	}
 	.box24:hover {
 		cursor: pointer;
 	}
 	.animated{
-			-webkit-animation: spin 1s infinite linear;
-	     animation: spin 1s infinite linear;
-	     transition: 0.6s;
+			-webkit-animation: spin 5s infinite linear;
+	     animation: spin 5s infinite linear;
+	     transition: 2s;
 		}
 	@keyframes  spin {
 	       0%  {-webkit-transform: rotate(0deg);}
@@ -309,9 +304,9 @@ div {
 		cursor: pointer;
 	}
 	.animated{
-			-webkit-animation: spin 1s infinite linear;
+			-webkit-animation: spin 4s infinite linear;
 	     animation: infinite linear;
-	     transition: 0.6s;
+	     transition: 1s;
 }
 
 .box26 {
@@ -375,254 +370,819 @@ div {
 
 .box36 {
 	background-color: snow;
-	cursor: pointer;
-}
+	transition: 1s;
+	transition-timing-function: ease-in-out;
+	}
+	.box36.selected {
+		border: 10px dotted teal;
+	}
 
 .box37 {
 	background-color: ivory;
 	cursor: pointer;
-}
+	}
+	.box37.selected {
+		transform:skewY(160deg);
+		width: 50%;
+	}
 
 .box38 {
 	background-color: linen;
 	cursor: pointer;
 	}
-	.box38:hover {
+	.box38.selected{
 		font-size: 2em;
 }
 
 .box39 {
 	background-color: mintcream;
 	cursor: pointer;
-}
+	}
+	.box39.selected {
+		background-color:lightblue;
+    transform:skewY(70deg);
+	}
 
 .box40 {
 	background-color: whitesmoke;
-}
+	transition: 1s;
+	}
+	.box40.selected {
+		  background-color: whitesmoke;
+		  animation-name: box;
+		  animation-duration: 1s;
+		  border-radius: 200px;
+		  width: 400px;
+		  height: 200px;
+		  box-shadow: 10px 10px 5px #888888;
+	}
 
 .box41 {
-	background-color: ghostwhite;
+	background-color: honeydew;
 	cursor: pointer;
+	}
+	.box41.selected {
+	  background-color: honeydew;
+	  animation-name: box;
+	  animation-duration: 1s;
+	  border-radius: 100px;
+	  transition: 1s;
+	  width: 50px;
+	  height: 60px;
 }
 
 .box42 {
 	background-color: aliceblue;
-	cursor: pointer;
-}
+	transition: 1s;
+	}
+	.box42.selected {
+		  background-color: aliceblue;
+		  animation-name: box;
+		  animation-duration: 1s;
+		  border-radius: 200px;
+		  width: 20%;
+		  box-shadow: 10px 10px 5px lightblue;
+	}
 
 .box43 {
 	background-color: azure;
-	cursor: pointer;
-}
+	transition: 3s;
+	}
+	.box43.selected {
+		  background-color: azure;
+		  animation-name: box;
+		  animation-duration: 1s;
+		  border-radius: 200px;
+		  width: 1000%;
+	}
 
 .box44 {
 	background-color: mintcream;
-}
+	transition: 3s;
+	}
+	.box44.selected {
+		  background-color: mintcream;
+		  animation-name: box;
+		  animation-duration: 1s;
+		  border-radius: 2000px;
+		  height: 500px;
+		  width: 600px;
+	}
 
 .box45 {
 	background-color: honeydew;
-}
+	transition: 1.5s;
+	z-index: 10;
+	display: inline-block;
+	}
+	.box45.selected {
+		  background-color: honeydew;
+		  animation-name: box;
+		  animation-duration: 10s;
+		  border-radius: 20px;
+		  height: 200px;
+		  width: 600px;
+		  box-shadow: 20px 20px 15px #888888;
+	}
 
 .box46 {
 	background-color: snow;
-}
+	transition: 1.5s;
+	z-index: 10;
+	display: inline-block;
+	}
+	.box46.selected {
+		  background-color: snow;
+		  animation-name: box;
+		  animation-duration: 1s;
+		  border-radius: 10px;
+		  height: 50px;
+		  width: 60px;
+		  border: 5px solid black;
+	}
 
 .box47 {
 	background-color: ivory;
-}
+	transition: 1.5s;
+	position: relative;
+	display: inline-block;
+	}
+	.box47.selected {
+		  animation-duration: 5s;
+		  border-radius: 10px;
+		  border: 5px solid blue;
+	}
 
 .box48 {
 	background-color: linen;
-}
+	transition: 3s;
+	position: relative;
+	display: inline-block;
+	}
+	.box48.selected {
+		  animation-duration: 5s;
+		  border-radius: 100%;
+		  border: 5px solid magenta;
+		  box-shadow: 10px 10px 5px #888888;
+	}
 
 .box49 {
 	background-color: mintcream;
-}
+	transition: 3s;
+	position: relative;
+	display: inline-block;
+	}
+	.box49.selected {
+		  animation-duration: 5s;
+		  border-radius: 100%;
+		  border: 200px solid magenta;
+	}
 
 .box50 {
 	background-color: whitesmoke;
+	display: inline-block;
+	}
+	@keyframes fifty {
+	  0%   {width: 20%; font-size: 12pt;}
+	  25%  {width: 10%; font-size: 4pt;}
+	  50%  {width: 20%; font-size: 4pt; transform: rotate(180deg)}
+	  100% {width: 0%; font-size: 0pt; transform: rotate(360deg)}
+	}
+	.box50.selected {
+	  animation-name: fifty;
+	  animation-duration: 10s;
+	  background-color: grey;
+	  width: 0%;
+	  font-size: 0pt;
+	  transform: rotate(360deg)
 }
 
 .box51 {
 	background-color: mistyrose;
+	display: inline-block;
+	}
+	@keyframes fiftyone {
+	  0%   {width: 20%; font-size: 12pt;}
+	  25%  {width: 10%; font-size: 4pt;}
+	  50%  {width: 20%; font-size: 4pt; transform: rotate(180deg)}
+	  100% {width: 40%; font-size: 0pt; transform: rotate(360deg)}
+	}
+	.box51.selected {
+	  animation-name: fiftyone;
+	  animation-duration: 1s;
+	  background-color: lavender;
+	  width: 50%;
+	  font-size: 0pt;
+	  transform: rotate(360deg)
 }
 
 .box52 {
-	background-color: lavenderblush
+	background-color: lavenderblush;
+	display: inline-block;
+	}
+	@keyframes fiftytwo {
+	  0%   {width: 50%; font-size: 12pt;}
+	  25%  {width: 10%; font-size: 4pt;}
+	  50%  {width: 100%; font-size: 4pt; transform: rotate(180deg)}
+	  100% {width: 0%; font-size: 0pt; transform: rotate(360deg)}
+	}
+	.box52.selected {
+	  animation-name: fiftytwo;
+	  animation-duration: 2s;
+	  width: 0%;
+	  font-size: 0pt;
+	  transform: rotate(360deg)
 }
 
 .box53 {
 	background-color: linen;
+	cursor: pointer;
+	}
+	@keyframes fiftythree {
+	  from {position: relative; right: 0px; bottom: 0px;}
+	  to {position: relative; right:50px; bottom: 150px;}
+	}
+	.box53.selected {
+	  animation-name: fiftythree;
+	  animation-duration: 2s;
+	  position: relative;
+	  right: 50px;
+	  bottom: 150px;
+	  height: 50%;
+	  width: 25%;
+	  background-color: blue;
 }
 
 .box54 {
 	background-color: antiquewhite;
+	cursor: pointer;
+	}
+	@keyframes fiftyfour {
+	  from {position: relative; right: 0px; bottom: 0px;}
+	  to {position: relative; right:50px; bottom: 150px;}
+	}
+	.box54.selected {
+	  animation-name: fiftyfour;
+	  animation-duration: 2s;
+	  position: relative;
+	  right: 50px;
+	  bottom: 150px;
+	  width: 50%;
 }
 
 .box55 {
 	background-color: ivory;
+	cursor: pointer;
+	}
+	@keyframes fiftyfive {
+	  from {position: relative; right: 0px; bottom: 0px;}
+	  to {position: relative; right:50px; bottom: 150px;}
+	}
+	.box55.selected {
+	  animation-name: fiftyfive;
+	  animation-duration: 2s;
+	  position: relative;
+	  right: 50px;
+	  bottom: 150px;
 }
 
 .box56 {
 	background-color: floralwhite;
+	cursor: pointer;
+	}
+	@keyframes fiftysix {
+	  from {position: relative; right: 0px; top: 0px;}
+	  to {position: relative; right:100px; top: 100px;}
+	}
+	.box56.selected {
+	  animation-name: fiftysix;
+	  animation-duration: 2s;
+	  position: relative;
+	  right: 100px;
+	  top: 100px;
 }
 
 .box57 {
 	background-color: oldlace;
+	cursor: pointer;
+	}
+	@keyframes fiftyseven {
+	  from {position: relative; right: 0px; top: 0px;}
+	  to {position: relative; right:500px; top: 100px;}
+	}
+	.box57.selected {
+	  animation-name: fiftyseven;
+	  animation-duration: 3s;
+	  position: relative;
+	  right: 500px;
+	  top: 100px;
+	  box-shadow: 10px 10px 5px #888888;
 }
 
 .box58 {
 	background-color: beige;
+	cursor: pointer;
+	}
+	@keyframes fiftyeight {
+	  from {position: relative; right: 0px; top: 0px;}
+	  to {position: relative; right:500px; top: 300px;}
+	}
+	.box58.selected {
+	  animation-name: fiftyeight;
+	  animation-duration: 3s;
+	  position: relative;
+	  right: 500px;
+	  top: 300px;
+	  border: 50px solid black;
 }
-
 .box59 {
 	background-color: seashell;
+	cursor: pointer;
+	}
+	@keyframes fiftynine {
+	  from {position: relative; right: 0px; bottom: 0px;}
+	  to {position: relative; right:50px; bottom: 150px;}
+	}
+	.box59.selected {
+	  animation-name: fiftynine;
+	  animation-duration: 2s;
+	  position: relative;
+	  right: 50px;
+	  bottom: 150px;
+	  opacity: .4;
 }
 
 .box60 {
 	background-color: whitesmoke;
+	cursor: pointer;
+	transition: all 2s;
+	}
+	.box60.selected {
+	  background-color: green;
+	  border-radius: 1000px; 
 }
 
 .box61 {
 	background-color: ghostwhite;
+	cursor: pointer;
+	transition: all 2s;
+	}
+	.box61.selected {
+	  background-color: green;
+	  border-radius: 10px; 
 }
 
 .box62 {
-	background-color: aliceblue;
-}
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		display: inline-block;
+		position: relative;
+		}
+		#box62 {
+			background: aliceblue;
+		    cursor: pointer;
+		    transition: 2s;
+		}
 
 .box63 {
-	background-color: azure;
-}
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		display: inline-block;
+		position: relative;
+		}
+		#box63 {
+			background: azure;
+		    cursor: pointer;
+		    transition: 0s;
+		}
 
 .box64 {
-	background-color: mintcream;
-}
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		display: inline-block;
+		position: relative;
+		}
+		#box64 {
+			background: mintcream;
+		    cursor: pointer;
+		    transition: 2s;
+		}
 
 .box65 {
-	background-color: honeydew;
-}
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		display: inline-block;
+		position: relative;
+		}
+		#box65 {
+			background: honeydew;
+		    cursor: pointer;
+		    transition: 0s;
+		}
 
 .box66 {
 	background-color: snow;
-}
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	display: inline-block;
+	position: relative;
+	}
+	#box66 {
+		background: snow;
+	    cursor: pointer;
+	    transition: 0.2s;
+	}
 
 .box67 {
 	background-color: ivory;
-}
+	transition: width 2s, height 4s;
+	}
+	.box67.selected {
+		  background-color: ivory;
+		  animation-name: box;
+		  width: 300px;
+		  height: 400px;
+		  border-radius: 100px;
+	}
 
 .box68 {
 	background-color: linen;
-}
+	transition: 2s;
+	}
+	.box68.selected {
+		  background-color: linen;
+		  animation-name: box;
+		  width: 300px;
+		  height: 400px;
+		  animation-duration: width 2s, height 4s;
+		  border-radius: 200px;
+	}
 
 .box69 {
 	background-color: mintcream;
-}
+	transition: 1s;
+	transition-timing-function: linear;
+	}
+	.box69.selected {
+		  background-color: mintcream;
+		  animation-name: box;
+		  width: 100px;
+		  height: 400px;
+	}
 
 .box70 {
 	background-color: whitesmoke;
-}
+	transition: 1s;
+	transition-timing-function: ease;
+	}
+	.box70.selected {
+		  background-color: whitesmoke;
+		  animation-name: box;
+		  width: 100px;
+		  height: 400px;
+	}
 
 .box71 {
 	background-color: mistyrose;
-}
+	transition: 1s;
+	transition-timing-function: ease-in;
+	}
+	.box71.selected {
+		  background-color: mistyrose;
+		  animation-name: box;
+		  width: 100px;
+		  height: 400px;
+	}
 
 .box72 {
-	background-color: lavenderblush
-}
+	background-color: lavenderblush;
+	transition: 1s;
+	transition-timing-function: ease-out;
+	}
+	.box72.selected {
+		  background-color: lavenderblush;
+		  animation-name: box;
+		  width: 100px;
+		  height: 400px;
+	}
 
 .box73 {
 	background-color: linen;
-}
+	transition: 1s;
+	transition-timing-function: ease-in-out;
+	}
+	.box73.selected {
+		  background-color: linen;
+		  animation-name: box;
+		  width: 100px;
+		  height: 400px;
+	}
 
 .box74 {
 	background-color: antiquewhite;
-}
+	transition: width 3s, height 1s;
+	transition-delay: 1s;
+	}
+	.box74.selected {
+		  background-color: antiquewhite;
+		  animation-name: box;
+		  width: 400px;
+		  height: 100px;
+	}
 
 .box75 {
 	background-color: ivory;
-}
+	transition: width 2s, height 2s, transform 2s;
+	}
+	.box75.selected {
+		  background-color: ivory;
+		  animation-name: box;
+		  width: 300px;
+		  height: 300px;
+		  transform: rotate(180deg);
+	}
 
 .box76 {
 	background-color: floralwhite;
-}
+	transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+    font-size: 40px;
+	}
+	.box76.selected {
+		  background-color: floralwhite;
+		  animation-name: box;
+		  width: 300px;
+		  height: 300px;
+		  transform: rotate(180deg);
+	}
 
 .box77 {
 	background-color: oldlace;
-}
+	transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 0.5s;
+	}
+	.box77.selected {
+		  background-color: oldlace;
+		  animation-name: box;
+		  width: 300px;
+	}
 
 .box78 {
 	background-color: beige;
-}
+    transition-duration: 2s;
+	}
+	.box78.selected {
+		  background-color: beige;
+		  animation-name: box;
+		  transform: rotate(180deg);
+		  font-size: 40px;
+		  height: 100px;
+	}
 
 .box79 {
 	background-color: seashell;
-}
+    transition-duration: 2s;
+	}
+	.box79.selected {
+		  background-color: white;
+		  transform: rotate(180deg);
+		  font-size: 400px;
+	}
 
 .box80 {
 	background-color: whitesmoke;
-}
+    transition-duration: 0.1s;
+	}
+	.box80.selected {
+		  background-color: yellow;
+		  transform: rotate(7deg);
+	}
 
 .box81 {
 	background-color: ghostwhite;
-}
+    transition-duration: 1s;
+	}
+	.box81.selected {
+		  background-color: magenta;
+		  transform:matrix(0.586,0.8,-0.8,0.586,40,10);
+	}
 
 .box82 {
 	background-color: aliceblue;
+	transition-duration: 3s;
+	}	
+	.box82.selected {
+		  background-color: darkorange;
+		  transform:matrix(0.586,0.8,-0.8,0.866,0,0);
 }
 
 .box83 {
 	background-color: azure;
+	transition: 1s;
+	}	
+	.box83.selected {
+		  background-color: lightblue;
+		  transform:translate(-25px,-25px);
 }
 
 .box84 {
 	background-color: mintcream;
+	transition: all 2s;
+	}
+	.box84.selected {
+	  background-color: green;
+	  border-radius: 1000px; 
+	  transform:translateX(100px);
 }
 
 .box85 {
 	background-color: honeydew;
-}
+	transition: all 2s;
+	}
+	.box85.selected {
+		background-color: honeydew;
+		border-radius: 1000px; 
+		transform:translateY(-50px);
+	}
 
 .box86 {
 	background-color: snow;
-}
+	transition: all 3s;
+	}
+	.box86.selected {
+		background-color: white;
+		border: 20px solid snow;
+		border-radius: 1000px; 
+		transform:translateY(-50px);
+		width: 70%;
+		height: 80%;
+	}
 
 .box87 {
 	background-color: ivory;
-}
+	transition: all 3s;
+	}
+	.box87.selected {
+		background-color: ivory;
+		border: 20px solid grey;
+		border-radius: 1000px; 
+		transform:scale(2,2);
+	}
 
 .box88 {
 	background-color: linen;
-}
+	transition: all 3s;
+	}
+	.box88.selected {
+		background-color: orange;
+		border-radius: 100px; 
+		transform:scale(2,2);
+	}
 
 .box89 {
 	background-color: mintcream;
-}
+	}
+	.box89.selected {
+		background-color: mintcream;
+		border-radius: 100px; 
+		transform:scale(2,2);
+	}
 
 .box90 {
 	background-color: whitesmoke;
-}
+	transition-timing-function: ease-in-out;
+	transition: 0.3s;
+	}
+	.box90.selected {
+		background-color: whitesmoke;
+		width: 40%;
+		transform:scale(2,2);
+		transform:rotate(-110deg);
+	}
 
 .box91 {
 	background-color: mistyrose;
-}
+	transition-timing-function: ease-in-out;
+	transition: 0.3s;
+	}
+	.box91.selected {
+		background-color: green;
+		width: 40%;
+		transform:skew(110deg,110deg);
+	}
 
 .box92 {
-	background-color: lavenderblush
-}
+	background-color: lavenderblush;
+	transition-timing-function: ease-in-out;
+	transition: 1s;
+	}
+	.box92.selected {
+		background-color: lavenderblush;
+		width: 200px;
+		transform:skew(130deg,130deg);
+	}
 
 .box93 {
 	background-color: linen;
-}
+	transition-timing-function: ease-in-out;
+	}
+	.box93.selected {
+		background-color: linen;
+		transform:skew(130deg,130deg);
+	}
 
 .box94 {
 	background-color: antiquewhite;
-}
+	transition-timing-function: linear;
+	transition: 2s;
+	transition-delay: 0.5s;
+	}
+	.box94.selected {
+		background-color: antiquewhite;
+		transform:skewX(20deg);
+	}
 
 .box95 {
 	background-color: ivory;
-}
+	transition-timing-function: linear;
+	transition: 2s;
+	transition-delay: 0.5s;
+	}
+	.box95.selected {
+		background-color: black;
+		transform:skewX(-20deg);
+		width: 400px;
+		height: 450px;
+	}
 
 .box96 {
 	background-color: floralwhite;
-}
+	transition-timing-function: ease-in;
+	transition: 1.5s;
+	}
+	.box96.selected {
+		background-color: lightblue;
+  	  transform:skewY(100deg);
+  	  opacity: 1;
+	}
+
+.box97 {
+	background-color: honeydew;
+	transition: 1.5s;
+	z-index: 10;
+	display: inline-block;
+	}
+	.box97.selected {
+		  background-color: honeydew;
+		  border-style: dotted;
+		  animation-duration: 10s;
+		  border-radius: 20px;
+		  height: 200px;
+		  width: 600px;
+		  box-shadow: 20px 20px 15px #888888;
+	}
+
+.box98 {
+	background-color: linen;
+	transition: all 3s;
+	}
+	.box98.selected {
+		background-color: orange;
+		border-radius: 100px; 
+		border-style: dashed;
+		transform: scale(2,2);
+	}
+
+.box99 {
+	background-color: peachpuff;
+	transition-timing-function: ease-in-out;
+	transition: 1.5s;
+	}
+	.box99.selected {
+		background-color: linen;
+		border-radius: 100px; 
+		border: 10px double coral;
+		border-collapse: collapse;
+		transform: scale(-2,0.2);
+	}
+
+.box100 {
+	background-color: lightyellow;
+	transition-timing-function: ease-in-out;
+	transition: 1.5s;
+	}
+	.box100.selected {
+		background-color: white;
+		border-radius: 100px; 
+		border: 10px double tomato;
+		transform: scale(2,2);
+	}
