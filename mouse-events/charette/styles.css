@@ -359,14 +359,13 @@ div {
 	cursor: pointer;
 	height: 240px;
 	}
-
 	span {
       background: honeydew;
       padding: 3px;
       float: left;
       font-size: 20px;
       padding-top: 20px;
-}
+	}
 
 .box36 {
 	background-color: snow;
