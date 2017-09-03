@@ -1,12 +1,15 @@
 div {
+	justify-content: center;
+	align-items: center;
 	width: 250px;
-	height: 120px;
+	height: 140px;
 	display: inline-block;
-	float: center;
 	text-align: center;
-	padding-top: 100px;
+	padding-top: 80px;
 	margin-bottom: 3px;
 	cursor: pointer;
+	vertical-align: middle;
+	
 }
 
 .box1 {
@@ -913,6 +916,7 @@ div {
     transition-timing-function: linear;
     transition-delay: 1s;
     font-size: 40px;
+
 	}
 	.box76.selected {
 		  background-color: floralwhite;
