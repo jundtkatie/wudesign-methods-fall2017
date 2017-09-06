@@ -1,0 +1,15 @@
+span {
+    color: red;
+    cursor: pointer;
+    float: left;
+    width:258px;
+  }
+  div#stack {
+    margin: 3px;
+    width: 80px;
+    display: none;
+    height: 80px;
+    float: left;
+    background-color: red;
+  }
+

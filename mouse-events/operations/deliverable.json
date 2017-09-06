@@ -1,0 +1,8 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "Generation",
+      "file" : "index.html"
+    },
+  ]
+}
