@@ -48,14 +48,19 @@ body {
 }
 
 .circle {
-	width: 100px;
-    height: 100px;
+	width: 10px;
+    height: 10px;
 	margin: auto;
 	bottom: 0;
 	position: absolute;
     background-color: black;
-	display: block;
+	display: inline-block;
 	transition: all 1s ease;
 	border-radius: 50%;
 
+}
+div:hover {
+	width: 200px;
+    height: 200px;
+    cursor: pointer;
 }

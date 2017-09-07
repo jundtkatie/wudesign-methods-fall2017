@@ -7,7 +7,7 @@
 		<title>Iteration</title>
 
 		<style>
-			
+			#draggable { width: 150px; height: 150px; padding: 0.5em; }
 		</style>
 
 </head>
@@ -60,20 +60,27 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
 <script type="text/javascript">
+
+$( function() {
+    $( "div.circle" ).draggable();
+  } );
+
 	$(document).ready(function(){
 			$ ("div.circle") .each(function(){
 				$(this).delay(Math.random()*1000)
 					.animate({
-						width: "1000px", 
-						height: "1000px"
-					})
+						width: "5000px", 
+						height: "5000px"
+					}, "slow")
 					.animate({
 						height: "10px", 
 						width: "10px"
-					}); 
+					}, "slow"); 
 			})
 		});
 
@@ -81,99 +88,110 @@
 			$ ("div.circle") .each(function(){
 				$(this).delay(Math.random()*1000)
 					.animate({
-						width: "1000px", 
-						height: "1000px"
-					})
+						width: "200em", 
+						height: "200em"
+					}, "slow")
 					.animate({
 						height: "10px", 
 						width: "10px"
-					}); 
+					}, "slow"); 
 			})
 		});
 
-		$(document).ready(function(){
+				$(document).ready(function(){
 			$ ("div.circle") .each(function(){
 				$(this).delay(Math.random()*1000)
 					.animate({
-						width: "1000px", 
-						height: "1000px"
-					})
+						width: "200em", 
+						height: "200em"
+					}, "slow")
 					.animate({
 						height: "10px", 
 						width: "10px"
-					}); 
+					}, "slow"); 
 			})
 		});
 
-		$(document).ready(function(){
+						$(document).ready(function(){
 			$ ("div.circle") .each(function(){
 				$(this).delay(Math.random()*1000)
 					.animate({
-						width: "1000px", 
-						height: "1000px"
-					})
+						width: "200em", 
+						height: "200em"
+					}, "slow")
 					.animate({
 						height: "10px", 
 						width: "10px"
-					}); 
+					}, "slow"); 
 			})
 		});
 
-		$(document).ready(function(){
+								$(document).ready(function(){
 			$ ("div.circle") .each(function(){
 				$(this).delay(Math.random()*1000)
 					.animate({
-						width: "1000px", 
-						height: "1000px"
-					})
+						width: "200em", 
+						height: "200em"
+					}, "slow")
 					.animate({
 						height: "10px", 
 						width: "10px"
-					}); 
+					}, "slow"); 
 			})
 		});
 
-		$(document).ready(function(){
+										$(document).ready(function(){
 			$ ("div.circle") .each(function(){
 				$(this).delay(Math.random()*1000)
 					.animate({
-						width: "1000px", 
-						height: "1000px"
-					})
+						width: "200em", 
+						height: "200em"
+					}, "slow")
 					.animate({
 						height: "10px", 
 						width: "10px"
-					}); 
+					}, "slow"); 
 			})
 		});
 
-		$(document).ready(function(){
+												$(document).ready(function(){
 			$ ("div.circle") .each(function(){
 				$(this).delay(Math.random()*1000)
 					.animate({
-						width: "1000px", 
-						height: "1000px"
-					})
+						width: "200em", 
+						height: "200em"
+					}, "slow")
 					.animate({
 						height: "10px", 
 						width: "10px"
-					}); 
+					}, "slow"); 
 			})
 		});
 
-		$(document).ready(function(){
+														$(document).ready(function(){
 			$ ("div.circle") .each(function(){
 				$(this).delay(Math.random()*1000)
 					.animate({
-						width: "1000px", 
-						height: "1000px"
-					})
+						width: "200em", 
+						height: "200em"
+					}, "slow")
 					.animate({
 						height: "10px", 
 						width: "10px"
-					}); 
+					}, "slow"); 
 			})
 		});
+			$ ("div.circle") .click(function(){
+				$(this).toggleClass(Math.random()*1000)
+					.animate({
+						width: "500em", 
+						height: "500em"
+					}, "slow")
+					.animate({
+						height: "10px", 
+						width: "10px"
+					}, "slow"); 
+			})
 
 </script>
 
