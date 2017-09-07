@@ -2,7 +2,7 @@
   "entrypoints" : [
     {
       "name" : "Generation",
-      "file" : "generation.html"
+      "file" : "index.html"
     },
     {
       "name" : "Manipulation",
