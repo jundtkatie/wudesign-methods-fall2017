@@ -1,0 +1,44 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+		<title>Randomization</title>
+
+		<style>
+			
+		</style>
+
+</head>
+
+<body> 
+
+<div class="manipulation"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+	<script>
+	$(document.body).click(function() {
+        $(".manipulation").append($('<div>', {class: 'element'}));      // Append the new elements
+	});
+
+	$( ".manipulation" ).click(function() {
+			var leng = Math.floor(10+ Math.random() * 500);
+			var widt = Math.floor(10+ Math.random() * 500);
+			 $( this ).width( widt ).addClass( "morph" );
+			 $( this ).height( leng ).addClass( "morph" );
+			console.log("hello");
+			var colorR = Math.floor((Math.random() * 256));
+	     	var colorG = Math.floor((Math.random() * 256));
+	     	var colorB = Math.floor((Math.random() * 256));
+			$(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+			$(this).toggleClass("selected");
+		});
+	</script>
+
+
+</body>
+</html> 

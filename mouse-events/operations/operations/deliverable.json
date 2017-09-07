@@ -1,0 +1,20 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "Generation",
+      "file" : "generation.html"
+    },
+    {
+      "name" : "Manipulation",
+      "file" : "manipulation.html"
+    },
+    {
+      "name" : "Randomization",
+      "file" : "randomization.html"
+    },
+    {
+      "name" : "Iteration",
+      "file" : "iteration.html"
+    },
+  ]
+}
