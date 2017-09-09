@@ -2,7 +2,7 @@
   "entrypoints" : [
     {
       "name" : "Round 1 (1)",
-      "file" : "index.html"
+      "file" : "index1.html"
     },
     {
       "name" : "Round 1 (2)",
