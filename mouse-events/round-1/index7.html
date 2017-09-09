@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Round_1(7)</title>
+
+<style type="text/css">
+	html, body {
+	height: 100%;
+	width: 100%;
+
+
+}
+
+.shape {
+	background-color: orange;
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 10%;
+	position: relative;
+	height: 60%;
+}
+
+.shape_two {
+	background-color: teal;
+	width: 450px;
+	margin-left: 30%;
+	margin-top: 10%;
+	position: absolute;
+	height: 450px;
+}
+
+.shape_three {
+	background-color: blue;
+	width: 450px;
+	margin-left: 30%;
+	margin-top: 10%;
+	position: absolute;
+	height: 450px;
+}
+
+.shape_four {
+	background-color: blue;
+	width: 450px;
+	margin: auto;
+	margin-top: 25%;
+	position: relative;
+	height: 450px;
+	display: inline-block;
+}
+
+.shape_four {
+	background-color: tomato;
+	width: 450px;
+	margin: auto;
+	margin-top: 25%;
+	position: relative;
+	height: 450px;
+	display: inline-block;
+}
+.shape_four:hover {
+	width: 110%;
+	height: 110%;
+	cursor: pointer;
+	background-color: rgb(64, 224, 208);
+}
+.shape_five {
+	background-color: blue;
+	width: 450px;
+	margin: auto;
+	margin-top: 25%;
+	position: relative;
+	height: 450px;
+	display: inline-block;
+}
+.shape_six {
+	background-color: blue;
+	width: 450px;
+	margin: auto;
+	margin-top: 25%;
+	position: relative;
+	height: 450px;
+	display: inline-block;
+}
+</style>
+
+</head>
+
+ <div class="shape_three" style="background-color: white;"> </div> 
+ <div class="shape_two" style="background-color: white; width: 40%; height: 30%; margin-left: 0; margin-top: 0; border-radius: 900px;"></div>
+
+<div class="shape_five" style="background-color: white; width: 32%; height: 30%; border-radius: 900px;"></div>
+<div class="shape_four" style="background-color: tomato; width: 32%; height: 30%; border-radius: 900px;"></div>
+<div class="shape_six" style="background-color: white; width: 32%; height: 30%; border-radius: 900px;"></div>
+
+
+
+
+
+
+<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+
+<script> 
+$(".shape_four").click(function(){
+		$(".shape_four").css({
+			"transition": "10s, slow",
+			"background-color": "teal",
+			"-webkit-transform": "rotatez(7360deg)",
+    		"transform": "rotatez(7360deg)",
+    		"opacity": "20%",
+    		"width": "10%",
+    		"height": "18%",
+    		"margin-right": "20%",
+    		"margin-top": "-25%"
+		})
+
+		$(".shape_five").css({
+			"transition": "5s, slow",
+			"background-color": "mediumturquoise",
+    		// "opacity": "0",
+    		"width": "18%",
+    		"height": "20%",
+    		"margin-right": "25%,"
+		})
+		$(".shape_six").css({
+			"transition": "15s, slow",
+			"background-color": "#40E0D0",
+    		// "opacity": "0",
+    		"transform": "rotatez(7360deg)",
+    		"width": "20%",
+    		"height": "10%",
+    		"margin-right": "5%,"
+		})
+
+		$(".shape_two").css({
+		"border-radius": "100px",
+		"transition": "10s",
+		"background-color": "#008B8B",
+		// "-webkit-transform": "rotatez(7360deg)",
+  //   		"transform": "rotatez(7360deg)",
+    		// "opacity": "0",
+    		"width": "20%",
+    		"height": "8%",
+    		"margin-left": "20%"
+
+		});
+
+		$(".shape_three").css({
+			
+		"border-radius": "0px",
+		"transition": "5s",
+		"background-color": "teal",
+		"-webkit-transform": "rotatez(-736deg)",
+    		"transform": "rotatez(-736deg)",
+    		// "opacity": "0",
+    		"border-radius": "800px",
+    		"width": "10%",
+    		"height": "8%",
+    		"margin-left": "0"
+
+		});
+ 		
+		
+
+		$("body").css({
+        	"background-color": "#FF5733",
+        	"transition": "8s",
+        	"transition-delay": "1s",
+        
+        	
+        });
+	});	
+	
+$("div").click(function() {
+
+  $(this).draggable();
+
+  $(this).css("cursor", "move");
+
+  // var color = randomColor();
+  // $(this).css("background-color", color);
+  // $('body').css("background-color", randomColor);
+
+  var x = Math.floor((Math.random()*200)+5);
+  $(this).width(x+'px');
+  $(this).height(x+'px');
+
+  $(this).css({
+    left:(Math.random()*$(window).width()+50),
+    top:(Math.random()*$(window).height()+50),});
+});
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+		<title>Round-1(4)</title>
+
+		<style>
+			html, body {
+				height: 100%;
+				overflow: hidden;
+			}
+
+			.shape {
+				background-color: orange;
+				width: 60%;
+				margin-left: 20%;
+				margin-top: 10%;
+				position: relative;
+				height: 60%;
+			}
+
+			.button {
+				position: absolute;
+				top: 45%;
+				left: 45%;
+
+			}
+
+			.shape_two {
+				background-color: orange;
+				width: 450px;
+				margin-left: 30%;
+				margin-top: 10%;
+				position: absolute;
+				height: 450px;
+				border-radius: 400px;
+			}
+
+			.shape_three {
+				background-color: blue;
+				width: 450px;
+				margin-left: 30%;
+				margin-top: 10%;
+				position: absolute;
+				height: 450px;
+			}
+		</style>
+
+</head>
+
+<body> 
+<div class="shape_two"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+      
+        $(".shape_two").css({
+        	"background-color": "black",
+    		"transition": "5s",
+    		"background-color": "red",
+    		"transition-delay": "1s",
+    		"width": "20px",
+    		"height": "20px",
+        	});
+
+        $("body").css({
+        	"background-color": "lavender",
+        	"transition": "5s"
+        });
+        
+    });
+
+</script>
+
+
+</body>
+</html> 

@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Round_1(9)</title>
+
+<style type="text/css">
+	html, body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+
+}
+
+.shape {
+	background-color: gold;
+	position: absolute;
+	margin: 5%;
+	background-color: white;
+	border-radius: 100px;
+}
+
+
+.shape_four {
+	background-color: gold;
+	width: 450px;
+	margin: auto;
+	margin-top: 25%;
+	position: relative;
+	height: 450px;
+	display: inline-block;
+}
+.shape_four:hover {
+	width: 110%;
+	height: 110%;
+	cursor: pointer;
+	background-color: rgb(64, 224, 208);
+}
+
+
+</style>
+
+</head>
+
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape_four" style="background-color: violet; width: 32%; height: 30%; border-radius: 900px;"></div>
+
+
+
+
+
+
+<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+
+<script> 
+$(".shape_four").click(function(){
+		$(".shape_four").css({
+			"transition": "10s, slow",
+			"background-color": "#FFFF00",
+			"-webkit-transform": "rotatez(7360deg)",
+    		"transform": "rotatez(7360deg)",
+    		"opacity": "20%",
+    		"width": "10%",
+    		"height": "18%",
+    		"margin-right": "20%",
+    		"margin-top": "-25%"
+		})
+
+		
+		$(".shape").css({
+			"transition": "15s, slow",
+			"background-color": "#FFFF00",
+    		// "opacity": "0",
+    		"transform": "rotatez(7360deg)",
+    		"width": "10%",
+    		"height": "10%",
+    		"margin-right": "5%,"
+
+		})
+
+		
+
+		$("body").css({
+        	"background-color": "#EE82EE",
+        	"transition": "8s",
+        	"transition-delay": "1s",
+        
+        	
+        });
+	});	
+	
+$("div").click(function() {
+
+  $(this).draggable();
+
+  $(this).css("cursor", "move");
+
+  // var color = randomColor();
+  // $(this).css("background-color", color);
+  // $('body').css("background-color", randomColor);
+
+  var x = Math.floor((Math.random()*200)+5);
+  $(this).width(x+'px');
+  $(this).height(x+'px');
+
+  $(this).css({
+    left:(Math.random()*$(window).width()+50),
+    top:(Math.random()*$(window).height()+50),});
+});
+
+
+// $(".shape_two").click(function() {
+//     $("body").append($(".shape_two");
+// 	});
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+
+
+</body>
+</html>
+

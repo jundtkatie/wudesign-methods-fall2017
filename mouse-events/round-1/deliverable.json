@@ -1,0 +1,44 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "Round 1 (1)",
+      "file" : "index.html"
+    },
+    {
+      "name" : "Round 1 (2)",
+      "file" : "index2.html"
+    },
+    {
+      "name" : "Round 1 (3)",
+      "file" : "index3.html"
+    },
+    {
+      "name" : "Round 1 (4)",
+      "file" : "index4.html"
+    },
+    {
+      "name" : "Round 1 (5)",
+      "file" : "index5.html"
+    },
+    {
+      "name" : "Round 1 (6)",
+      "file" : "index6.html"
+    },
+    {
+      "name" : "Round 1 (7)",
+      "file" : "index7.html"
+    },
+    {
+      "name" : "Round 1 (8)",
+      "file" : "index8.html"
+    },
+    {
+      "name" : "Round 1 (9)",
+      "file" : "index9.html"
+    },
+    {
+      "name" : "Round 1 (10)",
+      "file" : "index10.html"
+    },
+  ]
+}
