@@ -1,0 +1,92 @@
+<html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+		<title>Round-1(3)</title>
+
+		<style>
+			html, body {
+				height: 100%;
+				overflow: hidden;
+			}
+
+			.shape {
+				background-color: orange;
+				width: 60%;
+				margin-left: 20%;
+				margin-top: 10%;
+				position: relative;
+				height: 60%;
+			}
+
+			.shape2 {
+				background-color: white;
+				width: 40%;
+				margin-left: 0;
+				margin-top: 0;
+				position: absolute;
+				height: 30%;
+			}
+
+			.shape3 {
+				background-color: white;
+				width: 450px;
+				margin-left: 30%;
+				margin-top: 10%;
+				position: absolute;
+				height: 450px;
+			}
+		</style>
+
+</head>
+
+<body> 
+ <div class="shape3"></div> 
+ <div class="shape2"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+
+<script> 
+
+
+$(document).ready(function(){
+
+		$(".shape2").css({
+			"border-radius": "0px",
+			"transition": "10s",
+			"background-color": "darkred",
+	    	"opacity": "0",
+	    	"width": "2000%",
+	    	"height": "2000%"
+		});
+
+		$(".shape3").css({	
+		"border-radius": "0px",
+		"transition": "10s",
+		"background-color": "tomato",
+		"-webkit-transform": "rotatez(1090deg)",
+    		"transform": "rotatez(1090deg)",
+    		"opacity": "0",
+    		"border-radius": "800px",
+    		"width": "70%",
+    		"height": "90%",
+    		"margin-left": "0"
+		});
+ 		
+		
+		$("body").css({
+        	"background-color": "lightpink",
+        	"transition": "15s",
+        	"transition-delay": "1s"
+        });
+	});	
+	
+
+</script>
+
+
+</body>
+</html> 

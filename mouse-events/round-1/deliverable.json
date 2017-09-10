@@ -1,0 +1,44 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "Entry 1",
+      "file" : "Entry1.html"
+    },
+    {
+      "name" : "Entry 2",
+      "file" : "Entry2.html"
+    },
+    {
+      "name" : "Entry 3",
+      "file" : "Entry3.html"
+    },
+    {
+      "name" : "Entry 4",
+      "file" : "Entry4.html"
+    },
+    {
+      "name" : "Entry 5",
+      "file" : "Entry5.html"
+    },
+    {
+      "name" : "Entry 6",
+      "file" : "Entry6.html"
+    },
+    {
+      "name" : "Entry 7",
+      "file" : "Entry7.html"
+    },
+    {
+      "name" : "Entry 8",
+      "file" : "Entry8.html"
+    },
+    {
+      "name" : "Entry 9",
+      "file" : "Entry9.html"
+    },
+    {
+      "name" : "Entry 10",
+      "file" : "Entry10.html"
+    },
+  ]
+}
