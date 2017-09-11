@@ -1,44 +1,80 @@
 {
   "entrypoints" : [
     {
-      "name" : "Entry 1",
+      "name" : "1",
       "file" : "Entry1.html"
     },
     {
-      "name" : "Entry 2",
+      "name" : "2",
       "file" : "Entry2.html"
     },
     {
-      "name" : "Entry 3",
+      "name" : "3",
       "file" : "Entry3.html"
     },
     {
-      "name" : "Entry 4",
+      "name" : "4",
       "file" : "Entry4.html"
     },
     {
-      "name" : "Entry 5",
+      "name" : "5",
       "file" : "Entry5.html"
     },
     {
-      "name" : "Entry 6",
+      "name" : "6",
       "file" : "Entry6.html"
     },
     {
-      "name" : "Entry 7",
+      "name" : "7",
       "file" : "Entry7.html"
     },
     {
-      "name" : "Entry 8",
+      "name" : "8",
       "file" : "Entry8.html"
     },
     {
-      "name" : "Entry 9",
+      "name" : "9",
       "file" : "Entry9.html"
     },
     {
-      "name" : "Entry 10",
+      "name" : "10",
       "file" : "Entry10.html"
+    },
+    {
+      "name" : "11",
+      "file" : "Entry11.html"
+    },
+    {
+      "name" : "12",
+      "file" : "Entry12.html"
+    },
+    {
+      "name" : "13",
+      "file" : "Entry13.html"
+    },
+    {
+      "name" : "14",
+      "file" : "Entry14.html"
+    },
+    {
+      "name" : "15",
+      "file" : "Entry15.html"
+    },
+    {
+      "name" : "16",
+      "file" : "Entry16.html"
+    },
+    {
+      "name" : "17",
+      "file" : "Entry17.html"
+    },
+    {
+      "name" : "18",
+      "file" : "Entry18.html"
+    },
+    {
+      "name" : "19",
+      "file" : "Entry19.html"
     }
   ]
 }
