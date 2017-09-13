@@ -1,0 +1,40 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "1",
+      "file" : "Entry1.html"
+    },
+    {
+      "name" : "2",
+      "file" : "Entry2.html"
+    },
+    {
+      "name" : "3",
+      "file" : "Entry3.html"
+    },
+    {
+      "name" : "4",
+      "file" : "Entry4.html"
+    },
+    {
+      "name" : "5",
+      "file" : "Entry5.html"
+    },
+    {
+      "name" : "6",
+      "file" : "Entry6.html"
+    },
+    {
+      "name" : "7",
+      "file" : "Entry7.html"
+    },
+    {
+      "name" : "8",
+      "file" : "Entry8.html"
+    },
+    {
+      "name" : "9",
+      "file" : "Entry9.html"
+    }
+  ]
+}
