@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Round_3(2)</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+  		<script src="randomColor.js"></script>
+<script src="jquery.eraser.js"></script>
+
+<style type="text/css">
+
+.skew {
+    position: fixed;
+    height: 200px;
+}
+
+html{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	background-color: tomato;
+}
+
+.shape {
+	padding: 10px;
+	opacity: .5;
+	background-color: tomato;
+	height: 1px;
+	display: inline-block;
+	transition: .5s all ease-in-out;
+}
+
+</style>
+
+</head>
+
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+
+
+
+
+
+
+<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+
+<script> 
+	
+$('.shape').mouseover(function() {
+  $(this).toggleClass(".skew");
+  
+});
+$(".shape").hover(function() {
+  var x = Math.floor((Math.random()*100)+5);
+  $(this).width(x+'px');
+  $(this).height(x+'px');
+
+  $(this).css({
+    "background-color": "orangered"
+});
+});
+$('.shape').mouseover(function() {
+  $(this).toggleClass("skew big");
+});
+
+
+
+
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+
+
+</body>
+</html>
+
