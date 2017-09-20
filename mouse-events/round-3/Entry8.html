@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Round_3(8)</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<style type="text/css">
+	html{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+  background-color: tomato;
+  transition: all 3s ease-in-out;
+}
+.skew {
+    position: absolute;
+    display: block;
+}
+.shape {
+    width: 100%;
+    height: 10px;
+    background-color: coral;
+    margin: 0;
+    padding: 0;
+    margin-top: 3px;
+    position: absolute;
+    display: inline-block;
+    transition: all 4s ease-in-out;
+		}
+
+</style>
+
+</head>
+
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+<div class="shape"></div> 
+
+
+
+
+
+
+
+<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+
+<script> 
+
+$('.shape').mouseover(function() {
+  $(this).toggleClass("skew");
+
+  var x = Math.floor((Math.random()*100)+5000);
+  $(this).width(10+'px');
+  $(this).height(10+'px');
+
+  $(this).css({
+    left:(Math.random()*$(window).width()+10),
+    top:(Math.random()*$(window).height()+10)
+
+});
+	
+});
+$('.shape').mouseover(function() {
+  $(this).toggleClass(".skew");
+  $(".shape").css("background-color", "coral");
+  $('html').css("background-color", "lightyellow");
+
+});
+
+$('.shape').click(function() {
+$(".shape").css("width", "100px");
+  $(".shape").css("height", "100px");
+  $(".shape").css("transition", ".2s ease-out");
+  $(".shape").css("opacity", "0");
+  });
+
+
+
+
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script src="randomColor.js"></script>
+<script src="jquery.eraser.js"></script>
+
+
+</body>
+</html>
+
