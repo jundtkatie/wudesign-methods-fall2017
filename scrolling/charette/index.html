@@ -1,0 +1,185 @@
+<html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+		<link rel="stylesheet" href="styles.css">
+		<title>Scrolling | Charette</title>
+
+<style>
+
+</style>
+
+</head>
+
+<body> 
+
+<div class="bar1" data-0="background-color:rgb(25, 25, 112);" data-1000="background-color:rgb(0, 0, 205);"></div>
+
+<div class="bar2" data-1337="left:0%;" data-100="left:50%;" data-1437="left:100%;"></div>
+
+<div class="bar3" data-0="left:0%;" data-100="left:50%;" data-1437="left:100%;"></div>
+
+<div class="bar4" data-0="background-color:rgb(100, 149, 237);transform:rotate(0deg);" data-top="background-color:rgb(135, 206, 250);transform:rotate(-60deg);"></div>
+
+<div class="bar5" data-center="background-color:rgb(176, 224, 230);transform[bounce]:rotate(0deg);border-radius:0px;" data-top="background-color:rgb(70, 130, 180);transform[bounce]:rotate(130deg);border-radius:900px;"></div>
+
+<div class="bar6" data-bottom="background-color:rgb(95, 158, 160);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(72, 209, 204);transform[bounce]:rotate(10deg);"></div>
+
+<div class="bar7" data-1150="background-color:rgb(218, 247, 166);transform[bounce]:rotate(0deg);" data-15-top="background-color:rgb(255, 211, 80);transform[bounce]:rotate(360deg);"></div>
+
+<!-- Let's have the animation end when the top of the element reaches the top of the viewport (element leaves the viewport) -->
+<!-- When the scroll top is 0. -->
+<div class="bar8" data-100-start="background-color:rgb(127, 255, 212);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(175, 238, 238);transform[bounce]:rotate(360deg);"></div>
+
+<!-- When the scroll top is 100. -->
+<div class="bar9" data--1300-start="background-color:rgb(224, 255, 255);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(0, 255, 255);transform[bounce]:rotate(360deg);"></div>
+
+<!-- When the scroll top is -100 -->
+<div class="bar10" data--1300-start="background-color:rgb(0, 128, 128);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(143, 188, 139);transform[bounce]:rotate(360deg);"></div>
+
+<!-- When offset is 0, but counting from the bottom of the document instead of from the top. In short: when you reach the bottom of the page. -->
+<div class="bar11" data-top="background-color:rgb(102, 205, 170);transform[bounce]:rotate(0deg);opacity:0;" data-center-center="background-color:rgb(85, 107, 47);transform[bounce]:rotate(0deg);opacity:1'"></div>
+
+<!-- 1500px before we reach the bottom. -->
+<div class="bar12" data-center-center="background-color:rgb(107, 142, 35);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(154, 205, 50);transform[bounce]:rotate(-700deg);"></div>
+
+<!-- 2px after we reach the bottom -->
+<div class="bar13" data-100-bottom="background-color:rgb(0, 100, 0);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(34, 139, 34);transform[bounce]:rotate(360deg);"></div>
+
+<!-- Let's have the animation end when the top of the element reaches the top of the viewport (element leaves the viewport) -->
+<!-- When the element's top is aligned with the top of the viewport. -->
+<div class="bar14" data-0-top-top="background-color:rgb(46, 139, 87);" data-top="background-color:rgb(60, 179, 113);"></div>
+
+<div class="bar28" data-10p-center="background-color:rgb(255, 99, 71);transform[bounce]:rotate(0deg); left:100%;" data-top="left:50%;" data-10p-bottom="background-color:rgb(255, 160, 122); left:0%;"></div>
+
+<!-- When the element's top is 100px above the top of the viewport. -->
+<div class="bar15" data-100-top-top="background-color:rgb(0, 255, 127);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(144, 238, 144);transform[bounce]:rotate(360deg);"></div>
+
+<!-- When the element's top is 100px below the top of the viewport. -->
+<div class="bar16" data--100-top-top="background-color:rgb(50, 205, 50);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(124, 252, 0);transform[bounce]:rotate(360deg);"></div>
+
+<!-- When the bottom of the element is at the top of the viewport (it's just not visible). -->
+<div class="bar17" data-0-top-bottom="background-color:rgb(173, 255, 47);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(189, 183, 107);transform[bounce]:rotate(360deg);"></div>
+
+<!-- When the element is at the center of the viewport. -->
+<div class="bar18" data-0-center-center="background-color:rgb(240, 230, 140);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(255, 218, 185);transform[bounce]:rotate(360deg);"></div>
+
+<!-- When the element's center is at the bottom of the viewport, thus the upper half of the element is visible. -->
+<div class="bar19" data-0-bottom-center="background-color:rgb(255, 228, 181);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(250, 250, 210);transform[bounce]:rotate(360deg);"></div>
+
+<!-- When the element's top is aligned with the top of the viewport. Using percentages -->
+<div class="bar20" data-75p="background-color:rgb(255, 255, 0);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(255, 215, 0);transform[bounce]:rotate(360deg);"></div>
+
+<!-- When the element's center is at the bottom of the viewport, thus the upper half of the element is visible. a 10% offset from the center anchor. -->
+<div class="bar21" data-10p-center="background-color:rgb(255, 165, 0);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(255, 69, 0);transform[bounce]:rotate(360deg);"></div>
+
+<div class="bar22" data-10p-center="background-color:rgb(255, 99, 71);transform[bounce]:rotate(0deg); left:0%;" data-top="left:50%;" data-10p-bottom="background-color:rgb(255, 160, 122); left:100%;"></div>
+
+<div class="bar23" data-10p-top="background-color:rgb(219, 112, 147);opacity:1;transform:rotate(0deg);" data-600="background-color:rgb(199, 21, 133);opacity:0;top:-10%;transform:rotate(-90deg);"></div>
+
+<div class="bar24" data-10p-top="background-color:rgb(255, 20, 147);opacity:0;transform:rotate(70deg);" data-600="background-color:rgb(255, 105, 180);opacity:1;top:-10%;transform:rotate(-90deg);"></div>
+
+<div class="bar25" data-0-bottom="background-color:rgb(255, 182, 193);transform:rotate(0deg);" data--600-top="background-color:rgb(205, 92, 92);transform:rotate(-200deg);"></div>
+
+<div class="bar26" data--50-top="background-color:rgb(250, 128, 114);opacity:0;transform:rotate(0deg)" data-top-bottom="opacity:1;" data--100-top-top="background-color:rgb(250, 128, 114);opacity:0; border-radius: 900px;transform:rotate(12deg)"></div><br>
+
+<div class="bar27" data-bottom-bottom="border-radius: 3px;background-color:rgb(250, 128, 114);width:0%;" data-center-center="background-color:rgb(250, 128, 114);width:100%;" data--100-top="background-color:rgb(255, 160, 122);width:0%;"></div><br>
+
+<div class="bar29" data--50-top="background-color:rgb(250, 128, 114);opacity:0;transform:rotate(0deg)" data-top-bottom="opacity:1;" data--100-top-top="background-color:rgb(250, 128, 114);opacity:0; border-radius: 900px;transform:rotate(12deg)"></div><br>
+
+<div class="bar30" data-top="background-color:rgb(250, 250, 114);opacity:0;transform:rotate(0deg);left:0%" data-top-bottom="opacity:1; left:70%;" data--100-top-top="background-color:rgb(250, 250, 114);opacity:0; border-radius: 900px;transform:rotate(12deg); left:100%;"></div><br>
+<div class="bar31" data-top="background-color:rgb(250, 200, 114);opacity:0;transform:rotate(0deg);left:100%;" data-top-bottom="opacity:1;left:30%;" data--100-top-top="background-color:rgb(250, 200, 114);opacity:0; border-radius: 900px;transform:rotate(12deg);left:0%;"></div><br>
+<div class="bar30" data-top="background-color:rgb(250, 150, 114);opacity:0;transform:rotate(0deg);left:0%" data-top-bottom="opacity:1; left:70%;" data--100-top-top="background-color:rgb(250, 150, 114);opacity:0; border-radius: 900px;transform:rotate(12deg); left:100%;"></div><br>
+<div class="bar31" data-top="background-color:rgb(250, 100, 114);opacity:0;transform:rotate(0deg);left:100%;" data-top-bottom="opacity:1;left:30%;" data--100-top-top="background-color:rgb(250, 100, 114);opacity:0; border-radius: 900px;transform:rotate(12deg);left:0%;"></div><br>
+<div class="bar30" data-top="background-color:rgb(250, 50, 114);opacity:0;transform:rotate(0deg);left:0%" data-top-bottom="opacity:1; left:70%;" data--100-top-top="background-color:rgb(250, 50, 114);opacity:0; border-radius: 900px;transform:rotate(12deg); left:100%;"></div><br>
+<div class="bar31" data-top="background-color:rgb(250, 0, 114);opacity:0;transform:rotate(0deg);left:100%;" data-top-bottom="opacity:1;left:30%;" data--100-top-top="background-color:rgb(250, 0, 114);opacity:0; border-radius: 900px;transform:rotate(12deg);left:0%;"></div><br>
+<div class="bar30" data-top="background-color:rgb(250, 50, 114);opacity:0;transform:rotate(0deg);left:0%" data-top-bottom="opacity:1; left:70%;" data--100-top-top="background-color:rgb(250, 50, 114);opacity:0; border-radius: 900px;transform:rotate(12deg); left:100%;"></div><br>
+<div class="bar31" data-top="background-color:rgb(250, 100, 114);opacity:0;transform:rotate(0deg);left:100%;" data-top-bottom="opacity:1;left:30%;" data--100-top-top="background-color:rgb(250, 100, 114);opacity:0; border-radius: 900px;transform:rotate(12deg);left:0%;"></div><br>
+
+<div class="bar36" data-0-bottom="background-color:rgb(255, 0, 0);transform:rotate(0deg);" data-0-top="background-color:rgb(255, 0, 0);transform:rotate(-720deg);"></div>
+<div class="bar37" data-0-bottom="background-color:rgb(255, 0, 0);transform:rotate(0deg);" data-0-top="background-color:rgb(255, 0, 0);transform:rotate(-720deg);"></div>
+
+<div class="blacklines">
+	<div class="bar32" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:0;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:0;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:0;"></div>
+	<div class="bar33" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:0;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:0;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:0;"></div>
+</div>
+<div class="blacklines">
+	<div class="bar32" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:.5;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;"></div>
+	<div class="bar33" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:.5;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;"></div>
+</div>
+<div class="blacklines">
+	<div class="bar32" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:.5;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;"></div>
+	<div class="bar33" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:.5;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;"></div>
+</div>
+<div class="blacklines">
+	<div class="bar32" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:.5;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;"></div>
+	<div class="bar33" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:.5;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;"></div>
+</div>
+<div class="blacklines">
+	<div class="bar32" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:.5;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;"></div>
+	<div class="bar33" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:.5;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;"></div>
+</div>
+<div class="blacklines">
+	<div class="bar32" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:.5;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;"></div>
+	<div class="bar33" data-bottom-bottom="border-radius: 3px;background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;" data-center-center="background-color:rgb(220, 20, 60);width:33%;height:50px;opacity:.5;" data--100-top="background-color:rgb(220, 20, 60);width:0%;height:0px;opacity:1;"></div>
+</div>
+
+<div class="bar34" data-bottom-center="left:0%;" data-100-top-top="left:50%;" data--100-top="left:100%;"></div>
+
+<div class="bar35" data-bottom-center="right:0%;" data-100-top-top="right:50%;" data--100-top="right:100%;"></div>
+
+<!-- <div class="bar36" data-0-bottom="background-color:rgb(255, 0, 0);transform:rotate(0deg);" data-0-top="background-color:rgb(255, 0, 0);transform:rotate(-720deg);"></div>
+<div class="bar37" data-0-bottom="background-color:rgb(255, 0, 0);transform:rotate(0deg);" data-0-top="background-color:rgb(255, 0, 0);transform:rotate(-720deg);"></div>
+ -->
+
+<!-- <div class="bar29" data-0-end="background-color:rgb(250, 128, 114);opacity:0;" data-center-center="background-color:rgb(250, 128, 114);opacity:1;" data-10p-bottom="background-color:rgb(255, 160, 122); opacity: 0;">.</div><br>
+<div class="bar30" data-0-end="background-color:rgb(250, 128, 114);opacity:0;" data-top="background-color:rgb(250, 128, 114);opacity:1;" data-10p-bottom="background-color:rgb(255, 160, 122); opacity: 0;">.</div> -->
+<!-- COLOR COMBINATIONS -->
+<!-- 
+
+data-10p-bottom="background-color:rgb(255, 160, 122); opacity: 0;"
+
+
+255, 0, 0
+178, 34, 34
+139, 0, 0
+165, 42, 42
+139, 69, 19
+210, 105, 30
+184, 134, 11
+218, 165, 32
+205, 133, 63
+244, 164, 96
+188, 143, 143
+210, 180, 140
+222, 184, 135
+245, 222, 179
+255, 222, 173
+255, 248, 220
+230, 230, 250
+216, 191, 216
+221, 160, 221
+238, 130, 238
+218, 112, 214
+255, 0, 255
+186, 85, 211
+147, 112, 219
+102, 51, 153
+138, 43, 226
+148, 0, 211
+139, 0, 139
+75, 0, 130
+106, 90, 205
+72, 61, 139
+123, 104, 238 -->
+
+
+<!-- <div class="bar99" data-0-end="background-color:rgb(102, 205, 170);transform[bounce]:rotate(0deg);opacity:0;" data-top="background-color:rgb(85, 107, 47);transform[bounce]:rotate(360deg);opacity:1'"></div> -->
+
+	<script type="text/javascript" src="skrollr.min.js"></script>
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+</body>
+</html> 
