@@ -1,9 +1,13 @@
 	html {
-		width: 100%;
-		height: 100%;
-		padding: 0px;
-		margin: 0px;
+		width:100%;
+		height:100%;
+		padding:0;
+		margin:0;
+		overflow-x:hidden;
 		background-color: lightyellow;
+	}
+	body {
+		height: 23000px;
 	}
 
 	div.bar1 {
@@ -17,7 +21,6 @@
 		z-index: -10;
 		overflow: hidden;
 	}
-
 	div.bar2 {
 		width: 50%;
 		height: 250px;
@@ -30,7 +33,6 @@
 		position: fixed;
 		overflow: hidden;
 	}
-
 	div.bar3 {
 		width: 30%;
 		height: 300px;
@@ -51,7 +53,6 @@
 		margin-top: 300px;
 		overflow: hidden;
 	}
-
 	div.bar5 {
 		width: 100%;
 		height: 240px;
@@ -70,7 +71,6 @@
 		padding: 0px;
 		z-index: 100;
 	}
-
 	div.bar7 {
 		width: 100%;
 		height: 20px;
@@ -78,7 +78,6 @@
 		display: inline-block;
 		padding: 0px;
 	}
-
 	div.bar8 {
 		width: 100%;
 		height: 20px;
@@ -129,16 +128,14 @@
 		padding: 0px;
 		z-index: 10;
 	}
-
 	div.bar14 {
 		width: 120%;
-		height: 1500px;
+		height: 300px;
 		margin-left: -20px;
-		position: absolute;
+		position: relative;
 		display: inline-block;
 		padding: 0px;
-		z-index: -10;
-		
+		z-index: -10;	
 	}
 	div.bar15 {
 		width: 100%;
@@ -162,7 +159,7 @@
 		position: absolute;
 		display: inline-block;
 		padding: 0px;
-		margin-top: 200px;
+		z-index: -15;
 	}
 	div.bar18 {
 		width: 100%;
@@ -170,7 +167,6 @@
 		position: relative;
 		display: inline-block;
 		padding: 0px;
-		margin-top: 200px;
 	}
 	div.bar19 {
 		width: 100%;
@@ -178,7 +174,7 @@
 		position: relative;
 		display: inline-block;
 		padding: 0px;
-		margin-top: 200px;
+		margin-top: 100px;
 	}
 	div.bar20 {
 		width: 50%;
@@ -186,16 +182,15 @@
 		position: relative;
 		display: inline-block;
 		padding: 0px;
-		margin-top: 200px;
+		margin-top: 40px;
 	}
 	div.bar21 {
-		width: 50%;
+		width: 500px;
 		height: 50px;
 		position: relative;
-		float: right;
 		display: inline-block;
 		padding: 0px;
-		margin-top: 300px;
+		margin-top: 500px;
 	}
 	div.bar22 {
 		width: 300px;
@@ -203,28 +198,26 @@
 		position: relative;
 		display: inline-block;
 		padding: 0px;
-		margin: 0px;
+		margin: 100px;
 	}
-
 	div.bar23 {
 		opacity: 1; 
-		top: 3%; 
 		transform: rotate(0deg); 
 		transform-origin: 0px 0px 0px;
 		position: relative;
 		display: inline-block;
 		width: 290px;
-		height: 10%;
+		height: 1000px;
 	}
 	div.bar24 {
-		opacity: 1; 
-		top: 3%; 
+		opacity: 1;  
 		position: relative;
 		display: inline-block;
 		width: 290px;
 		height: 500px;
 		padding: 0px;
 		margin: 0px;
+		border-radius: 900px;
 	}
 	div.bar25 {
 		padding: 0px;
@@ -235,16 +228,15 @@
 		height: 500px;
 	}
 	div.bar26 {
-		width: 10%;
+		width: 100px;
 		height: 70px;
 		position: relative;
 		display: inline-block;
 		padding: 0px;
-		margin-top: -200px;
 		z-index: 10;
 	}
 	div.bar27 {
-		width: 10%;
+		width: 100px;
 		height: 70px;
 		position: relative;
 		display: inline-block;
@@ -269,7 +261,7 @@
 		z-index: 10;
 	}
 	div.bar30 {
-		width: 10%;
+		width: 100px;
 		height: 70px;
 		position: relative;
 		display: inline-block;
@@ -277,7 +269,7 @@
 		z-index: 10;
 	}
 	div.bar31 {
-		width: 10%;
+		width: 100px;
 		height: 70px;
 		position: relative;
 		display: inline-block;
@@ -286,7 +278,7 @@
 		margin-bottom: 25px;
 	}
 	div.bar32 {
-		width: 10%;
+		width: 100px;
 		height: 70px;
 		position: relative;
 		border: 30px solid black;
@@ -297,7 +289,7 @@
 		z-index: 10;
 	}
 	div.bar33 {
-		width: 10%;
+		width: 100px;
 		height: 70px;
 		float:right;
 		position: relative;
@@ -335,10 +327,9 @@
 		margin-top: -650px;
 		z-index: -11;
 	}
-
 	div.bar36 {
 		width: 10px;
-		height: 1200px;
+		height: 1000px;
 		position: absolute;
 		display: inline-block;
 		padding: 0px;
@@ -347,7 +338,7 @@
 	}
 	div.bar37 {
 		width: 10px;
-		height: 1200px;
+		height: 1000px;
 		position: absolute;
 		display: inline-block;
 		padding: 0px;
@@ -361,197 +352,203 @@
 		display: inline-block;
 		padding: 0px;
 		background-color: #FFA07A;
+		border: 10px solid coral;
 		margin-top: 0px;
 		border-radius: 900px;
 	}
 	div.bar39 {
-		width: 200px;
-		height: 150px;
+		width: 750px;
+		height: 750px;
 		position: relative;
 		display: inline-block;
 		padding: 0px;
 		background-color: #FA8072;
-		margin-top: -650px;
+		border: 40px solid coral;
+		margin-top: 0px;
 		border-radius: 900px;
 	}
 	div.bar40 {
-		width: 300px;
-		height: 150px;
+		width: 750px;
+		width: 750px;
 		position: relative;
 		display: inline-block;
 		padding: 0px;
 		background-color: #FF7F50;
-		margin-top: -650px;
-		left: 50%;
+		border: 70px solid coral;
 		border-radius: 900px;
 	}
-	div.bar41 {
+
+	div.boxforboxes {
+		display: block;
 		width: 100%;
+		height: 700px;
+		position: static;
+		padding-top: 1400px;
+	}
+	div.bar41 {
+		width: 9%;
 		height: 200px;
 		display: inline-block;
 		padding: 0;
-		margin: 0;
+		margin: 9px;
 		background-color: #9ACD32;
-		position: relative;
-		margin-top:-120px;
 		z-index: -15;
+		position: relative;
 	}
 	div.bar42 {
-		width: 10%;
-		height: 700px;
+		width: 9%;
+		height: 400px;
 		display: inline-block;
 		padding: 0;
-		margin: 10px;
+		margin: 9px;
 		background-color: #008080;
-		position: relative;
 		z-index: -15;
+		position: relative;
 	}
 	div.bar43 {
-		width: 10%;
-		height: 700px;
+		width: 9%;
+		height: 300px;
 		display: inline-block;
 		padding: 0;
-		margin: 10px;
+		margin: 9px;
 		background-color: #20B2AA;
-		position: relative;
 		z-index: -15;
+		position: relative;
 	}
 	div.bar44 {
-		width: 10%;
-		height: 700px;
+		width: 9%;
+		height: 500px;
 		display: inline-block;
 		padding: 0;
-		margin: 10px;
+		margin: 9px;
 		background-color: #66CDAA;
-		position: relative;
 		z-index: -15;
+		position: relative;
 	}
 	div.bar45 {
-		width: 10%;
-		height: 700px;
+		width: 9%;
+		height: 100px;
 		display: inline-block;
 		padding: 0;
-		margin: 10px;
+		margin: 9px;
 		background-color: #8FBC8B;
-		position: relative;
 		z-index: -15;
+		position: relative;
 	}
 	div.bar46 {
-		width: 10%;
-		height: 700px;
+		width: 9%;
+		height: 400px;
 		display: inline-block;
 		padding: 0;
-		margin: 10px;
+		margin: 9px;
 		background-color: #48D1CC;
 		position: relative;
-		z-index: -15;
 	}
 	div.bar47 {
-		width: 10%;
-		height: 700px;
+		width: 9%;
+		height: 300px;
 		display: inline-block;
 		padding: 0;
-		margin: 10px;
+		margin: 9px;
 		background-color: #7FFFD4;
 		position: relative;
-		z-index: -15;
 	}
 	div.bar48 {
-		width: 10%;
-		height: 700px;
+		width: 9%;
+		height: 400px;
 		display: inline-block;
 		padding: 0;
-		margin: 10px;
+		margin: 9px;
 		background-color: #00FF7F;
 		position: relative;
-		z-index: -15;
 	}
-
 	div.bar49 {
-		width: 100%;
+		width: 750px;
 		height: 750px;
 		position: relative;
 		display: inline-block;
 		padding: 0px;
 		background-color: lightyellow;
-		margin-top: 0px;
+		margin-top: -2000px;
 		border: solid magenta;
 		border-radius: 900px;
+		z-index: -15;
 	}
 	div.bar50 {
-		background: rgb(217,223,159);
+		background: rgb(123, 104, 238);
 		display: inline-block;
 		position: relative;
-		width: 15%;
+		width: 9%;
 		height: 300px;
-		margin: 2px;
+		margin: 9px;
 	}
 	div.bar51 {
-		background: rgb(217,223,159);
+		background: rgb(190, 104, 238);
 		display: inline-block;
 		position: relative;
-		width: 15%;
-		height: 300px;
-		margin: 2px;
+		width: 9%;
+		height: 100px;
+		margin: 9px;
 	}
 	div.bar52 {
-		background: rgb(217,223,159);
+		background: rgb(238, 104, 219);
 		display: inline-block;
 		position: relative;
-		width: 15%;
-		height: 300px;
-		margin: 2px;
+		width: 9%;
+		height: 400px;
+		margin: 9px;
 	}
 	div.bar53 {
-		background: rgb(217,223,159);
+		background: rgb(238, 104, 152);
 		display: inline-block;
 		position: relative;
-		width: 15%;
-		height: 300px;
-		margin: 2px;
+		width: 9%;
+		height: 200px;
+		margin: 9px;
 	}
 	div.bar54 {
-		background: rgb(217,223,159);
+		background: rgb(238, 123, 104);
 		display: inline-block;
 		position: relative;
-		width: 15%;
-		height: 300px;
-		margin: 2px;
+		width: 9%;
+		height: 400px;
+		margin: 9px;
 	}
 	div.bar55 {
-		background: rgb(217,223,159);
+		background: rgb(238, 190, 104);
 		display: inline-block;
 		position: relative;
-		width: 15%;
+		width: 9%;
 		height: 300px;
-		margin: 5px;
+		margin: 9px;
 	}
 	div.bar56 {
-		background: rgb(217,223,159);
+		background: rgb(156, 104, 238);
 		display: inline-block;
 		position: relative;
-		width: 96%;
-		height: 175px;
+		width: 9%;
+		height: 400px;
+		margin: 9px;
 	}
 	div.bar57 {
-		width: 50%;
+		width: 250px;
 		height: 250px;
 		position: relative;
 		display: inline-block;
 		padding: 0px;
-		background-color: #4169E1;
-		position: relative;
+		margin-top: 200px;
+		border: 120px dashed red;
 	}
 	div.bar58 {
-		width: 30%;
-		height: 300px;
+		width: 100px;
+		height: 100px;
 		position: relative;
 		display: inline-block;
 		padding: 0px;
-		margin-top: 300px;
 		margin-bottom: 10px;
-		background-color: #7B68EE;
+		background-color: lightyellow;
 		position: relative;
+		border: 30px solid #7B68EE;
 	}
 	div.bar59 {
 		width: 50px;
@@ -563,30 +560,67 @@
 		position: relative;
 	}
 	div.bar60 {
-		width: 100%;
-		height: 20px;
+		width: 750px;
+		height: 750px;
 		position: relative;
 		display: inline-block;
 		padding: 0px;
-	}
-	div.bar61 {
-		width: 30%;
-		height: 135px;
-		position: relative;
-		display: inline-block;
-		padding: 0px;
-		margin-top: 0px;
+		background-color: none;
+		border: 40px dashed lightsalmon;
+		margin-top: -100px;
 		border-radius: 900px;
 	}
-
+	div.bar61 {
+		width: 750px;
+		height: 750px;
+		position: relative;
+		display: inline-block;
+		padding: 0px;
+		background-color: none;
+		border: 40px dashed coral;
+		margin-top: -100px;
+		border-radius: 900px;
+	}
+	div.bar72 {
+		width: 750px;
+		height: 750px;
+		position: relative;
+		display: inline-block;
+		padding: 0px;
+		background-color: none;
+		border: 40px dashed tomato;
+		margin-top: -100px;
+		border-radius: 900px;
+	}
+	div.bar73 {
+		width: 750px;
+		height: 750px;
+		position: relative;
+		display: inline-block;
+		padding: 0px;
+		background-color: none;
+		border: 40px dashed orangered;
+		margin-top: -100px;
+		border-radius: 900px;
+	}
+	div.bar74 {
+		width: 750px;
+		height: 750px;
+		position: relative;
+		display: inline-block;
+		padding: 0px;
+		background-color: none;
+		border: 40px dashed red;
+		margin-top: -100px;
+		border-radius: 900px;
+	}
 	div.bar62 {
-		width: 50%;
+		width: 100%;
 		height: 50px;
 		position: relative;
 		float: right;
 		display: inline-block;
 		padding: 0px;
-		margin-top: 300px;
 	}
 	div.bar63 {
 		width: 300px;
@@ -595,11 +629,9 @@
 		display: inline-block;
 		padding: 0px;
 		margin: 0px;
-		background-color: yellow;
 	}
 	div.bar64 {
 		opacity: 1; 
-		top: 3%; 
 		transform: rotate(200deg); 
 		transform-origin: 0px 0px 0px;
 		position: relative;
@@ -609,15 +641,15 @@
 	}
 	div.bar65 {
 		opacity: 1; 
-		top: 3%; 
-		transform: rotate(200deg); 
-		transform-origin: 0px 0px 0px;
-		position: relative;
 		display: inline-block;
 		width: 700px;
 		height: 700px;
 		margin-bottom: 0px;
 		z-index: -40;
+		background-color: none;
+		position: relative;
+		border: 12px dotted yellowgreen;
+		margin-top: -700px;
 	}
 	div.bar66 {
 		padding: 0px;
@@ -675,7 +707,185 @@
 		z-index: -17;
 		right: 50%;
 	}
+	div.bar75 {
+		width: 750px;
+		height: 750px;
+		position: absolute;
+		display: inline-block;
+		padding: 0px;
+		background-color: gold;
+		border-radius: 900px;
+		z-index: -100;
+	}
+	div.bar76 {
+		width:400px;
+		height: 200px;
+		margin-top: 50px;
+		background: lavender;
+		border-radius:1em;
+		display: inline-block;
+		position: relative;
+
+		-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		-ms-transform-origin:0 0;
+		-o-transform-origin:0 0;
+		transform-origin:0 0;
+
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	div.bar77 {
+		margin-left:-35%;
+		left:50%;
+		border-radius: 20px;
+		text-align:center;
+		margin-left:-35%;
+		background: tomato;
+		.transform-origin(50%, 50%);
+		position:relative;
+		width:400px;
+		height: 200px;
+		z-index: 20;
+	}
+	div.bar78 {
+		height:2%;
+		background:#444;
+		bottom:0;
+		z-index:200;
+		display: block;
+		position: fixed;
+	}
+div.bar81 {
+	width:100%;
+	height:100%;
+}
+
+div.bar79 {
+	top:10%;
+	width:50%;
+	z-index:101;
+	background: tomato;
+	width:400px;
+		height: 200px;
+		opacity: .4;
+}
+.bar80 {
+	width:300px;
+	height: 100px;
+	background-color: teal;
+	margin-left: 50px;
+	margin-top: 50px;
+}
+div.linear82 {
+	background:#09f;
+	padding:1em;
+	position:static;
+	border: 1px solid blue;
+}
+div.quadratic83 {
+	background:#09f;
+	padding:1em;
+	position:static;
+	border: 1px solid blue;
+}
+div.cubic84 {
+	background:#09f;
+	padding:1em;
+	position:static;
+	border: 1px solid blue;
+}
+div.swing85 {
+	background:#09f;
+	padding:1em;
+	position:static;
+	border: 1px solid blue;
+}
+div.WTF86 {
+	background:#09f;
+	padding:1em;
+	position:static;
+	border: 1px solid blue;
+}
+div.inverted87 {
+	background:#09f;
+	padding:1em;
+	position:static;
+	border: 1px solid blue;
+}
+div.bounce88 {
+	background:#09f;
+	padding:1em;
+	position:static;
+	border: 1px solid blue;
+}
+
+div.dino89 {
+	width:100%;
+	height:100%;
+	padding-top:10%;
+	text-align:center;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+#headline1 {
+      background-image: url(dinosaur.png);
+      background-repeat: no-repeat;
+      width: 856px;
+      height: 906px;
+      z-index: 100;
+      }
 
 
 
+div.black99 {
+	height: 100%;
+	width: 110%;
+	display: cover;
+	text-align: center;
 
+}
+p.the_end100 {
+	margin-top: 400px;
+	font-size: 2em;
+	font-family: arial;
+
+}
+
+.skrollable {
+	/*
+	 * First-level skrollables are positioned relative to window
+	 */
+	position:fixed;
+
+	/*
+	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+	 */
+	z-index:100;
+}
+
+.skrollr-mobile .skrollable {
+	/*
+		May cause issues on Android default browser (see #331 on GitHub).
+	*/
+	position:absolute;
+}
+
+.skrollable .skrollable {
+	/*
+	 * Second-level skrollables are positioned relative their parent skrollable
+	 */
+	position:absolute;
+}
+
+.skrollable .skrollable .skrollable {
+	/*
+	 * Third-level (and below) skrollables are positioned static
+	 */
+	position:static;
+}
