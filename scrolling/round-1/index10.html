@@ -4,7 +4,7 @@
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 
-		<title>Round 1 | 8</title>
+		<title>Round 1 | 10</title>
 
 <style>
 	html {
@@ -16,8 +16,8 @@
 		overflow-x:hidden;
 	}
 	div.bar60 {
-		width: 50%;
-		height: 50%;
+		width: 750px;
+		height: 750px;
 		display: inline-block;
 		padding: 0px;
 		background-color: lightsalmon;
@@ -25,8 +25,8 @@
 		border-radius: 900px;
 	}
 	div.bar61 {
-		width: 150px;
-		height: 150px;
+		width: 750px;
+		height: 750px;
 		display: inline-block;
 		padding: 0px;
 		background-color: coral;
@@ -34,8 +34,8 @@
 		border-radius: 900px;
 	}
 	div.bar72 {
-		width: 150px;
-		height: 150px;
+		width: 750px;
+		height: 750px;
 		display: inline-block;
 		padding: 0px;
 		background-color: tomato;
@@ -43,8 +43,8 @@
 		border-radius: 900px;
 	}
 	div.bar73 {
-		width: 50%;
-		height: 50%;
+		width: 750px;
+		height: 750px;
 		display: inline-block;
 		padding: 0px;
 		background-color: orangered;
@@ -52,22 +52,37 @@
 		border-radius: 900px;
 	}
 	div.bar74 {
-		width: 150px;
-		height: 150px;
+		width: 750px;
+		height: 750px;
 		display: inline-block;
 		padding: 0px;
 		background-color: red;
 		/*border: 40px dashed red;*/
 		border-radius: 900px;
 	}
-.circlegroup1 {
-	position: relative;
+.circlegroup {
+	position: absolute;
 	display: inline-block;
-	width: 50px;
-	height: 50px;
-	opacity: .5;
 }
 
+	div.bar35 {
+		width: 750px;
+		height: 750px;
+		display: inline-block;
+		padding: 0px;
+		background-color: lavender;
+		/*border: 40px dashed coral;*/
+		border-radius: 900px;
+	}
+	div.bar36 {
+		width: 750px;
+		height: 750px;
+		display: inline-block;
+		padding: 0px;
+		background-color: #DAF7A6;
+		/*border: 40px dashed coral;*/
+		border-radius: 900px;
+	}
 
 .skrollable {
 	/*
@@ -106,22 +121,71 @@
 </head>
 
 <body> 
-<div class="circlegroup1">
-	<div class="bar60" data-0-top="transform:scale(0) rotate(0deg);background-color:rgb(255, 160, 122);" data-500="transform:scale(1) rotate(1440deg);opacity:1;background-color:rgb(230, 230, 250);" data-700="transform:scale(5) rotate(3240deg);opacity:.5;background-color:rgb(230, 230, 250);">
+<div class="circlegroup">
+	<div class="bar60" data-0-top="transform:scale(0) rotate(0deg);" data-500="transform:scale(1) rotate(1440deg);opacity:1;" data-700="transform:scale(5) rotate(3240deg);opacity:.5;">
 		
-		<div class="bar61" data-0-top="transform:scale(0) rotate(0deg);background-color:rgb(255, 127, 80);" data-500="transform:scale(1) rotate(1440deg);opacity:1;background-color:rgb(230, 230, 250);" data-700="transform:scale(5) rotate(3240deg);background-color:rgb(230, 230, 250);opacity:0;">
+		<div class="bar35" data-0-top="transform:scale(0) rotate(0deg);" data-500="transform:scale(1) rotate(1440deg);opacity:1;" data-700="transform:scale(5) rotate(3240deg);opacity:0;">
 			
-			<div class="bar72" data-0-top="transform:scale(0) rotate(0deg);background-color:rgb(255, 99, 71);" data-500="transform:scale(1) rotate(1440deg);opacity:1;background-color:rgb(230, 230, 250);" data-700="transform:scale(5) rotate(3240deg);opacity:0;background-color:rgb(230, 230, 250);">
+			<div class="bar72" data-0-top="transform:scale(0) rotate(0deg);" data-500="transform:scale(1) rotate(1440deg);opacity:1;" data-700="transform:scale(5) rotate(3240deg);opacity:0;">
 				
-				<div class="bar73" data-0-top="transform:scale(0) rotate(0deg);background-color:rgb(255, 69, 0);" data-500="transform:scale(1) rotate(1440deg);opacity:1;background-color:rgb(230, 230, 250);" data-700="transform:scale(5) rotate(3240deg);opacity:0;background-color:rgb(230, 230, 250);">
+				<div class="bar73" data-0-top="transform:scale(0) rotate(0deg);" data-500="transform:scale(1) rotate(1440deg);opacity:1;" data-700="transform:scale(5) rotate(3240deg);opacity:0;">
 				
-					<div class="bar74" data-0-top="transform:scale(0) rotate(0deg);background-color:rgb(255, 0, 0);" data-500="transform:scale(1) rotate(1440deg);opacity:1;background-color:rgb(230, 230, 250);" data-700="transform:scale(5) rotate(3240deg);opacity:0;background-color:rgb(230, 230, 250);">
+					<div class="bar74" data-0-top="transform:scale(0) rotate(0deg);" data-500="transform:scale(1) rotate(1440deg);opacity:1;" data-700="transform:scale(5) rotate(3240deg);opacity:0;">
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<div class="circlegroup">
+	<div class="bar60" data-0-top="transform:scale(0) rotate(0deg);" data-700="transform:scale(1) rotate(1440deg);opacity:1;" data-1100="transform:scale(5) rotate(3240deg);opacity:.5;">
+		
+		<div class="bar35" data-0-top="transform:scale(0) rotate(0deg);" data-900="transform:scale(1) rotate(1440deg);opacity:1;" data-1100="transform:scale(5) rotate(3240deg);opacity:.5;">
+			
+			<div class="bar72" data-0-top="transform:scale(0) rotate(0deg);" data-900="transform:scale(1) rotate(1440deg);opacity:1;" data-1100="transform:scale(5) rotate(3240deg);opacity:.5;">
+				
+				<div class="bar73" data-0-top="transform:scale(0) rotate(0deg);" data-900="transform:scale(1) rotate(1440deg);opacity:1;" data-1100="transform:scale(5) rotate(3240deg);opacity:.5;">
+				
+					<div class="bar74" data-0-top="transform:scale(0) rotate(0deg);" data-900="transform:scale(1) rotate(1440deg);opacity:1;" data-1100="transform:scale(5) rotate(3240deg);opacity:.5;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="circlegroup">
+	<div class="bar60" data-0-top="transform:scale(0) rotate(0deg);" data-1100="transform:scale(1) rotate(1440deg);opacity:1;" data-1300="transform:scale(5) rotate(3240deg);opacity:.5;">
+		
+		<div class="bar61" data-0-top="transform:scale(0) rotate(0deg);" data-1100="transform:scale(1) rotate(1440deg);opacity:1;" data-1300="transform:scale(5) rotate(3240deg);opacity:.5;">
+			
+			<div class="bar72" data-0-top="transform:scale(0) rotate(0deg);" data-1100="transform:scale(1) rotate(1440deg);opacity:1;" data-1300="transform:scale(5) rotate(3240deg);opacity:.5;">
+				
+				<div class="bar73" data-0-top="transform:scale(0) rotate(0deg);" data-1100="transform:scale(1) rotate(1440deg);opacity:1;" data-1300="transform:scale(5) rotate(3240deg);opacity:.5;">
+				
+					<div class="bar74" data-0-top="transform:scale(0) rotate(0deg);" data-1100="transform:scale(1) rotate(1440deg);opacity:1;" data-1300="transform:scale(5) rotate(3240deg);opacity:.5;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="circlegroup">
+	<div class="bar60" data-0-top="transform:scale(0) rotate(0deg);" data-1300="transform:scale(1) rotate(1440deg);opacity:1;" data-1500="transform:scale(5) rotate(3240deg);opacity:.5;">
+		
+		<div class="bar61" data-0-top="transform:scale(0) rotate(0deg);" data-1300="transform:scale(1) rotate(1440deg);opacity:1;" data-1500="transform:scale(5) rotate(3240deg);opacity:.5;">
+			
+			<div class="bar72" data-0-top="transform:scale(0) rotate(0deg);" data-1300="transform:scale(1) rotate(1440deg);opacity:1;" data-1500="transform:scale(5) rotate(3240deg);opacity:.5;">
+
+				<div class="bar73" data-0-top="transform:scale(0) rotate(0deg);" data-1300="transform:scale(1) rotate(1440deg);opacity:1;" data-1500="transform:scale(5) rotate(3240deg);opacity:.5;">
+				
+					<div class="bar36" data-0-top="transform:scale(0) rotate(0deg);" data-1300="transform:scale(1) rotate(1440deg);opacity:1;" data-1500="transform:scale(5) rotate(3240deg);opacity:.5;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
 
