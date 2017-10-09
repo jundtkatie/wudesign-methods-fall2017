@@ -1,0 +1,275 @@
+<html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+		<title>Round 1 | 15</title>
+
+<style>
+	html {
+		width:100%;
+		height:100%;
+		padding:0;
+		margin:0;
+		background-color: peachpuff;
+		overflow-x:hidden;
+	}
+	div.bar60 {
+		width: 750px;
+		height: 750px;
+		display: inline-block;
+		padding: 0px;
+		/*background-color: lightsalmon;*/
+		border: 40px dashed lightsalmon;
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.bar61 {
+		width: 750px;
+		height: 750px;
+		display: inline-block;
+		padding: 0px;
+		/*background-color: coral;*/
+		border: 40px dashed coral;
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.bar72 {
+		width: 750px;
+		height: 750px;
+		display: inline-block;
+		padding: 0px;
+/*		background-color: tomato;
+*/		border: 40px dashed tomato;
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.bar73 {
+		width: 750px;
+		height: 750px;
+		display: inline-block;
+		padding: 0px;
+/*		background-color: orangered;
+*/		border: 40px dashed orangered;
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.bar74 {
+		width: 750px;
+		height: 750px;
+		display: inline-block;
+		padding: 0px;
+/*		background-color: red;*/
+		border: 40px dashed red;
+		border-radius: 900px;
+		z-index: 100;
+	}
+.circlegroup {
+	position: absolute;
+	display: cover;
+	z-index: 200;
+	margin-top: 0;
+}
+
+/*	div.bar35 {
+		width: 750px;
+		height: 750px;
+		display: inline-block;
+		padding: 0px;
+		background-color: lavender;
+		/*border: 40px dashed coral;*/
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.bar36 {
+		width: 750px;
+		height: 750px;
+		display: inline-block;
+		padding: 0px;
+		background-color: #DAF7A6;
+		/*border: 40px dashed coral;*/
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.bar55 {
+		width: 750px;
+		height: 750px;
+		display: block;
+		padding: 0px;
+		background-color: #DAF7A6;
+		border: 40px dashed #DAF7A6;
+		border-radius: 900px;
+		z-index: 100;
+	}
+
+.skrollable {
+	position:fixed;
+	z-index:100;
+}
+.skrollr-mobile .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable .skrollable {
+	position:static;
+}
+</style>
+
+</head>
+
+<body> 
+<div class="circlegroup">
+	<div class="bar60" 
+		data-0="transform:scale(0);" 
+		data-100="transform:scale(1);" ></div>
+		
+	<div class="bar35" 
+		data-0="transform:scale(0);" 
+		data-150="transform:scale(1);" ></div>
+		
+	<div class="bar72" 
+		data-0="transform:scale(0);" 
+		data-200="transform:scale(1);"></div>
+				
+	<div class="bar73" 
+		data-0="transform:scale(0);" 
+		data-250="transform:scale(1);" ></div>
+				
+	<div class="bar74" 
+		data-0="transform:scale(0);" 
+		data-300="transform:scale(1);" ></div>
+
+	<div class="bar60" 
+		data-0="transform:scale(0);" 
+		data-350="transform:scale(1);"></div>
+
+	<div class="bar60" 
+		data-0="transform:scale(0);" 
+		data-400="transform:scale(1);"></div>
+
+	<div class="bar35" 
+		data-0="transform:scale(0);" 
+		data-450="transform:scale(1);"></div>
+
+	<div class="bar35" 
+		data-0="transform:scale(0);" 
+		data-500="transform:scale(1);"></div>
+
+	<div class="bar72" 
+		data-0="transform:scale(0);" 
+		data-550="transform:scale(1);"></div>
+
+	<div class="bar73" 
+		data-0="transform:scale(0);" 
+		data-600="transform:scale(1);"></div>
+				
+	<div class="bar74" 
+		data-0="transform:scale(0);" 
+		data-650="transform:scale(1);" ></div>
+
+	<div class="bar60" 
+		data-0="transform:scale(0);" 
+		data-700="transform:scale(1);"></div>
+		
+	<div class="bar61" 
+		data-0="transform:scale(0);" 
+		data-750="transform:scale(1);" ></div>
+			
+	<div class="bar72" 
+		data-0="transform:scale(0);" 
+		data-800="transform:scale(1);" ></div>
+
+	<div class="bar60" 
+		data-0="transform:scale(0);" 
+		data-850="transform:scale(1);" ></div>
+		
+	<div class="bar61" 
+		data-0="transform:scale(0);" 
+		data-900="transform:scale(1);" ></div>
+
+	<div class="bar72" 
+		data-0="transform:scale(0);" 
+		data-950="transform:scale(1);" ></div>
+				
+	<div class="bar73" 
+		data-0="transform:scale(0);" 
+		data-1000="transform:scale(1);"> </div>
+
+				
+	<div class="bar74" 
+		data-0="transform:scale(0);" 
+		data-1050="transform:scale(1);" ></div>
+
+
+	<div class="bar60" 
+		data-0="transform:scale(0);" 
+		data-1100="transform:scale(1);"> </div>
+
+		
+	<div class="bar61" 
+		data-0="transform:scale(0);" 
+		data-1150="transform:scale(1);"></div>
+
+			
+	<div class="bar72" 
+		data-0="transform:scale(0);" 
+		data-1250="transform:scale(1);"></div>
+
+
+	<div class="bar73" 
+		data-0="transform:scale(0);" 
+		data-1350="transform:scale(1));"></div>
+
+				
+	<div class="bar36" 
+		data-0="transform:scale(0);" 
+		data-1400="transform:scale(1);"></div>
+
+	<div class="bar55" 
+		data-0="transform:scale(0);" 
+		data-1400="transform:scale(1);"
+		data-1500="transform:scale(5);"></div>
+
+</div>
+
+<!-- </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> -->
+
+
+
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+	<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+})
+
+
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+	</script>
+
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+</body>
+</html> 
