@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+		<title>Round 2 | 9</title>
+
+<style>
+	html {
+		width:100%;
+		height:100%;
+		padding:0;
+		margin:auto;
+		background-color: orangered;
+		overflow-x:hidden;
+	}
+
+.circlegroup {
+	position: relative;
+	display: cover;
+	z-index: 200;
+	top: 22%;
+}
+
+	.body {
+		width: 110%;
+		height: 110%;
+		z-index: -10;
+		display: cover;
+		margin-left: -10px;
+		margin-top: -10px;
+		padding: 0px;
+
+	}
+
+	div.lavender {
+		width: 750px;
+		height: 750px;
+		display: inline-block;
+		padding: 0px;
+		background-color: lavender;
+		border-radius: 900px;
+		z-index: -50;
+	}
+
+.skrollable {
+	position:fixed;
+	z-index:100;
+}
+.skrollr-mobile .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable .skrollable {
+	position:static;
+}
+</style>
+
+</head>
+
+<body> 
+<div class="circlegroup" style="display:flex;justify-content:center;align-items:center;">
+	<div class="lavender" 
+		data-0="transform[swing]:scale(0)rotate(0deg);left:0%;"
+		data-400="transform[WTF]:scale(2)rotate(1440deg);left:10%;bottom:12%;background-color:rgb(245, 230, 250);"
+		data-600="transform[WTF]:scale(0)rotate(3240deg);left:20%;bottom:25%;background-color:rgb(245, 230, 250);" 
+		data-1000="transform[WTF]:scale(5)rotate(4240deg);left:50%;bottom:70%;background-color:rgb(245, 230, 250);"
+		data-1400="transform[WTF]:scale(0)rotate(3240deg);left:20%;bottom:12%;background-color:rgb(245, 230, 250);" 
+		data-1800="transform[WTF]:scale(2)rotate(0deg);left:70%;bottom:80%;background-color:rgb(245, 230, 250);"
+		data-2200="transform[WTF]:scale(2)rotate(900deg);left:70%;bottom:80%;background-color:rgb(255, 255, 255);"
+		data-2400="transform[WTF]:scale(5)rotate(700deg);left:0%;bottom:8%;background-color:rgb(240, 230, 140);"
+		data-3000="transform[WTF]:scale(0)rotate(100deg);left:10%;bottom:0%;background-color:rgb(0, 0, 0);"></div>
+</div>
+
+
+<div class="body" 
+	data-0="background-color[swing]:rgb(0, 0, 0);"
+	data-500="background-color[swing]:rgb(0, 0, 0);" 
+	data-1200="background-color:rgb(255, 69, 0);"
+	data-2999="background-color:rgb(255, 69, 0);" 
+	data-3000="background-color[WTF]:rgb(0, 0, 0);" ></div>
+
+
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+	<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+})
+
+
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+	</script>
+
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+</body>
+</html> 
