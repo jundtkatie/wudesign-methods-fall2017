@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Round 3 | 7</title>
+
+<style>
+	html, body {
+		background-color: #00FA9A;
+	}
+
+	body {
+	    margin: 0;
+	}
+
+	div.lightsalmon {
+		width: 750px;
+		height: 750px;
+		padding: 0px;
+/*		background-color: lightsalmon;
+*/		border: 40px dashed lightsalmon;
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.coral {
+		width: 750px;
+		height: 750px;
+		padding: 0px;
+/*		background-color: coral;
+*/		border: 40px dashed coral;
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.tomato {
+		width: 750px;
+		height: 750px;
+		padding: 0px;
+/*		background-color: tomato;
+*/		border: 40px dashed tomato;
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.orangered {
+		width: 750px;
+		height: 750px;
+		padding: 0px;
+/*		background-color: orangered;
+*/		border: 40px dashed orangered;
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.red {
+		width: 750px;
+		height: 750px;
+		padding: 0px;
+/*		background-color: red;*/
+		border: 40px dashed red;
+		border-radius: 900px;
+		z-index: 100;
+	}
+
+	div.lavender {
+		width: 750px;
+		height: 750px;
+		padding: 0px;
+/*		background-color: lavender;*/
+		border: 40px dashed lavender;
+		border-radius: 900px;
+		z-index: 100;
+	}
+	div.yellow {
+		width: 750px;
+		height: 750px;
+		padding: 0px;
+		background-color: #FF4500;
+		border: 40px dashed #FF4500;
+		border-radius: 900px;
+	}
+
+.circlegroup {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 100;
+	left: 50%;
+	z-index: 10;
+}
+
+	.easingwrapper {
+		width:100%;
+		height:100%;
+		z-index: -10;
+		background-color:rgb(127, 255, 212);
+	}
+
+.skrollable {
+	position:fixed;
+	z-index:100;
+}
+.skrollr-mobile .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable .skrollable {
+	position:static;
+}
+</style>
+
+</head>
+
+<body> 
+
+<div class="easingwrapper" 
+	data-1200="display:block;" 
+	data-1300="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" 
+	data-1400="background:rgba(0,0,0,1);color:rgb(255,255,255);" 
+	data-1500="top:0%;">
+
+	<div class="circlegroup">
+			
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0) rotate(0deg);"
+				data-400="transform[swing]:scale(5) rotate(720deg);"></div>
+				
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-500="transform[swing]:scale(5) rotate(-720deg);"></div>
+						
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-600="transform[swing]:scale(5) rotate(720deg);"></div>
+			
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-700="transform[swing]:scale(5) rotate(-720deg);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-800="transform[swing]:scale(5) rotate(720deg);"></div>
+
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-900="transform[swing]:scale(5) rotate(-720deg);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1000="transform[swing]:scale(5) rotate(720deg);"></div>
+
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1100="transform[swing]:scale(5) rotate(-720deg);"></div>
+
+			<div class="yellow" 
+				data-0="transform[swing]:scale(0);" 
+				data-1200="transform[swing]:scale(5);"
+				data-1600="transform[swing]:scale(0);"></div>
+
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1300="transform[swing]:scale(5) rotate(720deg);"></div>
+				
+			<div class="coral" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1200="transform[swing]:scale(1) rotate(-360deg);"
+				data-1400="transform[swing]:scale(0) rotate(-720deg);"></div>
+						
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1300="transform[swing]:scale(.5) rotate(360deg);"
+				data-1500="transform[swing]:scale(0) rotate(720deg);"></div>
+			
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1400="transform[swing]:scale(.2) rotate(-360deg);"
+				data-1500="transform[swing]:scale(0) rotate(-720deg);"></div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+	<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+})
+
+
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+	</script>
+
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+</body>
+</html> 
