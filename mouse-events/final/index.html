@@ -70,12 +70,23 @@
     transition: all 4s ease-in-out;
     z-index: 10;
 }
-
+p {
+	/*color: #FE9B76;*/
+	color: #405680;
+	width: 40%;
+	float: right;
+	font-size: 30px;
+	font-family: "console", monospace;
+	padding-top: 25%;
+	padding-right: 5%;
+}
 
 
 </style>
 
 </head>
+
+<p>The following experiance involves mouse movement, clicks and double clicks. Move your mouse around the page to begin your exploration.</p>
 
 <div class="shape" id="shape2"></div> 
 <div class="shape" id="shape3"></div> 
@@ -166,7 +177,19 @@
 <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
 
 <script> 
-window.alert("The following experiance involves mouse movement, clicks and double clicks. Move your mouse around the page to begin your exploration.");
+// window.alert("The following experiance involves mouse movement, clicks and double clicks. Move your mouse around the page to begin your exploration.");
+$('p').mouseover(function() {
+   $(this).css("opacity", "0");
+   $(this).css("transition", "3s");
+   $(this).css("transition-delay", "5.5s");
+  // $(".shape2").mouseover(function() {
+  //   $(this).css("background-color", "#20B2AA");
+  // })
+  // $(".shape3").mouseover(function() {
+  //   $(this).css("background-color", "#20B2AA");
+  // })
+
+});
 
 $('.shape').mouseover(function() {
   $(this).toggleClass("skew");
