@@ -1,0 +1,8 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "1",
+      "file" : "index1.html"
+    }
+  ]
+}
