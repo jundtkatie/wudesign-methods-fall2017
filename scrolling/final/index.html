@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Scrolling</title>
+
+<style>
+html, body {
+	background-color: #00BAFF;
+	max-height: 4500px;
+}
+
+body {
+	margin: 0;
+}
+
+.orange_shape {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 50%;
+	border-radius: 900px;
+	width: 0px;
+	height: 0px;
+	border: 2px dashed orangered;
+	background-color: orangered;
+	z-index: 200;
+
+}
+
+div.lightsalmon_1 {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 40px dashed lightsalmon;
+	border-radius: 900px;
+	z-index: 100;
+}
+	
+div.coral_1 {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 40px dashed coral;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.tomato_1 {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 40px dashed tomato;
+	border-radius: 900px;
+	z-index: 100;
+}
+	
+div.orangered_1 {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 40px dashed orangered;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.orangered_outer {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 100px dashed orangered;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.red_1 {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 40px dashed red;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.lavender_1 {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 40px dashed lavender;
+	border-radius: 900px;
+	z-index: 100;
+}
+div.lavender_2 {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 5px solid lavender;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.orangered_2 {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 20px dashed orangered;
+	border-radius: 900px;
+	z-index: 100;
+}
+	
+div.coral_2 {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 20px dashed coral;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.yellow_1 {
+	width: 730px;
+	height: 730px;
+	padding: 0px;
+	background-color: #FF4500;
+	border: 40px dashed #FF4500;
+	border-radius: 900px;
+}
+
+.circlegroup_1 {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 100;
+	left: 50%;
+	z-index: 10;
+}
+
+.easingwrapper_1 {
+	width:100%;
+	height:100%;
+	z-index: -10;
+	background-color:rgb(127, 255, 212);
+}
+
+div.blue {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	background-color: #DDA0DD;
+	border: 100px solid #DDA0DD;
+	border-radius: 900px;
+	z-index: 100;
+	opacity: .15;
+}
+
+div.blue2 {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	background-color: mediumpurple;
+	border: 100px solid mediumpurple;
+	border-radius: 900px;
+	z-index: 100;
+	opacity: .15;
+}
+
+div.lightsalmon {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 10px solid lightsalmon;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.coral {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 10px solid coral;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.tomato {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 10px solid tomato;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.orangered {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 10px solid orangered;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.orangered_dashed {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 100px dashed coral;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.red {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 10px solid red;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.lavender {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	border: 10px solid lavender;
+	border-radius: 900px;
+	z-index: 100;
+}
+
+div.yellow {
+	width: 750px;
+	height: 750px;
+	padding: 0px;
+	background-color: #FF4500;
+	border: 10px solid #FF4500;
+	border-radius: 900px;
+}
+
+
+.circlegroup {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 100;
+	left: 50%;
+	z-index: 10;
+}
+
+.easingwrapper {
+	width:100%;
+	height:100%;
+	z-index: -10;
+	background-color:rgb(127, 255, 212);
+}
+
+.skrollable {
+	position:fixed;
+	z-index:100;
+}
+.skrollr-mobile .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable {
+	position:absolute;
+}
+.skrollable .skrollable .skrollable {
+	position:static;
+}
+
+</style>
+
+</head>
+
+<body> 
+
+
+<div class="easingwrapper_1" 
+	data-1200="display:block;" 
+	data-1300="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" 
+	data-1400="background:rgba(0,0,0,1);color:rgb(255,255,255);" 
+	data-1500="top:0%;">
+
+	<div class="circlegroup_1">
+
+	<div class="orange_shape"
+	data-0="transform[swing]:scale(1);"
+	data-50="transform[swing]:scale(0);"></div>
+
+
+			<div class="blue" 
+				data-0="transform[swing]:scale(0);"
+				data-200="transform[swing]:scale(.1);"
+				data-2400="transform[swing]:scale(0);"></div>
+			<div class="blue" 
+				data-0="transform[swing]:scale(0);"
+				data-240="transform[swing]:scale(.2);"
+				data-2460="transform[swing]:scale(0);"></div>
+			<div class="blue" 
+				data-0="transform[swing]:scale(0);"
+				data-260="transform[swing]:scale(.3);"
+				data-2480="transform[swing]:scale(0);"></div>
+			<div class="blue" 
+				data-0="transform[swing]:scale(0);"
+				data-280="transform[swing]:scale(.4);"
+				data-2500="transform[swing]:scale(0);"></div>
+			<div class="blue" 
+				data-0="transform[swing]:scale(0);"
+				data-300="transform[swing]:scale(.5);"
+				data-2520="transform[swing]:scale(0);"></div>
+			<div class="blue" 
+				data-0="transform[swing]:scale(0);"
+				data-320="transform[swing]:scale(.6);"
+				data-2540="transform[swing]:scale(0);"></div>
+			<div class="blue" 
+				data-0="transform[swing]:scale(0);"
+				data-340="transform[swing]:scale(.7);"
+				data-2560="transform[swing]:scale(0);"></div>
+			<div class="blue" 
+				data-0="transform[swing]:scale(0);"
+				data-360="transform[swing]:scale(.8);"
+				data-2580="transform[swing]:scale(0);"></div>
+
+
+			<div class="orangered_outer" 
+				data-0="transform[swing]:scale(0) rotate(0deg);"
+				data-800="transform[swing]:scale(5) rotate(720deg);"></div>
+				
+			<div class="coral_1" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1000="transform[swing]:scale(5) rotate(-720deg);"></div>
+						
+			<div class="tomato_1" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1200="transform[swing]:scale(5) rotate(720deg);"></div>
+			
+			<div class="tomato_1" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1400="transform[swing]:scale(5) rotate(-720deg);"></div>
+
+			<div class="orangered_1" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1600="transform[swing]:scale(5) rotate(720deg);"></div>
+
+			<div class="orangered_1" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-1800="transform[swing]:scale(5) rotate(-720deg);"></div>
+
+			<div class="orangered_1" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-2000="transform[swing]:scale(5) rotate(720deg);"></div>
+
+			<div class="red_1" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-2200="transform[swing]:scale(5) rotate(-720deg);"></div>
+
+<div class="yellow_1" 
+	data-0="transform[swing]:scale(0);" 
+	data-2400="transform[swing]:scale(5);"
+	data-3100="transform[swing]:scale(0);"></div>
+
+			<div class="orangered_2" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-2340="transform[swing]:scale(5) rotate(-720deg);"></div>
+			<div class="lavender_2" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-2380="transform[swing]:scale(5) rotate(720deg);"></div>
+			<div class="lavender_2" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-2720="transform[swing]:scale(5) rotate(720deg);"></div>
+			<div class="coral_2" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-2680="transform[swing]:scale(5) rotate(720deg);"></div>
+				
+			<div class="coral_1" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-2400="transform[swing]:scale(1) rotate(-720deg);"
+				data-2800="transform[swing]:scale(0) rotate(-1440deg);"></div>
+						
+			<div class="tomato_1" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-2600="transform[swing]:scale(.5) rotate(720deg);"
+				data-3000="transform[swing]:scale(0) rotate(1440deg);"></div>
+			
+			<div class="lavender_1" 
+				data-0="transform[swing]:scale(0) rotate(0deg);" 
+				data-2800="transform[swing]:scale(.2) rotate(-720deg);"
+				data-3000="transform[swing]:scale(0) rotate(-1440deg);"></div>
+	</div>
+</div>
+
+<div class="easingwrapper" 
+	data-1200="display:block;" 
+	data-3000="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" 
+	data-3800="background:rgba(0,0,0,1);color:rgb(255,255,255);">
+
+	<div class="circlegroup">
+			
+			<div class="orangered_dashed" 
+				data-0="transform[swing]:scale(0) rotate(0deg);"
+				data-3500="transform[swing]:scale(5) rotate(-720deg);"></div>
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0);"
+				data-3640="transform[swing]:scale(5);"></div>
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-3680="transform[swing]:scale(5);"></div>
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-3720="transform[swing]:scale(5);"></div>
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);"
+				data-3760="transform[swing]:scale(5);"></div>
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-3800="transform[swing]:scale(5);"></div>
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-3840="transform[swing]:scale(5);"></div>
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0);"
+				data-3880="transform[swing]:scale(5);"></div>
+
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);"
+				data-3920="transform[swing]:scale(5);"></div>
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0);"
+				data-3960="transform[swing]:scale(5);"></div>
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);"
+				data-4000="transform[swing]:scale(5);"></div>
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);"
+				data-4040="transform[swing]:scale(5);"></div>
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);"
+				data-4080="transform[swing]:scale(5);"></div>
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);"
+				data-4120="transform[swing]:scale(5);"></div>
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);"
+				data-4160="transform[swing]:scale(5);"></div>
+
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0);"
+				data-4200="transform[swing]:scale(5);"></div>
+
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);"
+				data-4400="transform[swing]:scale(5);"></div>
+				
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-4440="transform[swing]:scale(5);"></div>
+						
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-4480="transform[swing]:scale(5);"></div>
+			
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-4520="transform[swing]:scale(5);"></div>
+
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0);" 
+				data-4560="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-4600="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-4640="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-4680="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);"
+				data-4720="transform[swing]:scale(5);"></div>
+				
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-4760="transform[swing]:scale(5);"></div>
+						
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-4800="transform[swing]:scale(5);"></div>
+			
+			<div class="lavender" 
+				data-0="transform[swing]:scale(0);" 
+				data-4840="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-4880="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-4920="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-4960="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-5000="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);"
+				data-5040="transform[swing]:scale(5);"></div>
+				
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-5080="transform[swing]:scale(5);"></div>
+						
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-5120="transform[swing]:scale(5);"></div>
+			
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-5160="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-5200="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-5240="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-5280="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-5320="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-5360="transform[swing]:scale(5);"></div>
+
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-5400="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-5440="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-5480="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-5520="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-5560="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);"
+				data-5600="transform[swing]:scale(5);"></div>
+				
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-5640="transform[swing]:scale(5);"></div>
+						
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-5680="transform[swing]:scale(5);"></div>
+			
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-5720="transform[swing]:scale(5);"></div>
+
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-5760="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);"
+				data-5800="transform[swing]:scale(5);"></div>
+				
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-5840="transform[swing]:scale(5);"></div>
+						
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-5880="transform[swing]:scale(5);"></div>
+			
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-5920="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-5960="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-6000="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-6040="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-6080="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);"
+				data-6120="transform[swing]:scale(5);"></div>
+				
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-6160="transform[swing]:scale(5);"></div>
+						
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-6200="transform[swing]:scale(5);"></div>
+			
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-6240="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-6280="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-6320="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-6360="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-6400="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);"
+				data-6440="transform[swing]:scale(5);"></div>
+				
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-6480="transform[swing]:scale(5);"></div>
+						
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-6520="transform[swing]:scale(5);"></div>
+			
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-6560="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-6600="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-6640="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-6680="transform[swing]:scale(5);"></div>
+
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-6720="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-6760="transform[swing]:scale(5);"></div>
+
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-6800="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-6840="transform[swing]:scale(5);"></div>
+
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-6880="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);" 
+				data-6920="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-6960="transform[swing]:scale(5);"></div>
+
+			<div class="lightsalmon" 
+				data-0="transform[swing]:scale(0);"
+				data-7000="transform[swing]:scale(5);"></div>
+				
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-7040="transform[swing]:scale(5);"></div>
+						
+			<div class="tomato" 
+				data-0="transform[swing]:scale(0);" 
+				data-7080="transform[swing]:scale(5);"></div>
+			
+			<div class="coral" 
+				data-0="transform[swing]:scale(0);" 
+				data-7120="transform[swing]:scale(5);"></div>
+
+			<div class="orangered" 
+				data-0="transform[swing]:scale(0);" 
+				data-7160="transform[swing]:scale(5);"></div>
+
+			<div class="blue2" 
+				data-0="transform[swing]:scale(0);"
+				data-2420="transform[swing]:scale(.1);"
+				data-3020="transform[swing]:scale(0);"
+				data-3100="transform[swing]:scale(.1);"
+				data-3200="transform[swing]:scale(0);"></div>
+			<div class="blue2" 
+				data-0="transform[swing]:scale(0);"
+				data-2440="transform[swing]:scale(.2);"
+				data-3040="transform[swing]:scale(0);"
+				data-3120="transform[swing]:scale(.2);"
+				data-3220="transform[swing]:scale(0);"
+				data-3320="transform[swing]:scale(.2);"
+				data-3420="transform[swing]:scale(0);"></div>
+			<div class="blue2" 
+				data-0="transform[swing]:scale(0);"
+				data-2460="transform[swing]:scale(.3);"
+				data-3060="transform[swing]:scale(0);"
+				data-3140="transform[swing]:scale(.3);"
+				data-3240="transform[swing]:scale(0);"
+				data-3340="transform[swing]:scale(.3);"
+				data-3440="transform[swing]:scale(0);"
+				data-3500="transform[swing]:scale(.3);"
+				data-3540="transform[swing]:scale(0);"></div>
+			<div class="blue2" 
+				data-0="transform[swing]:scale(0);"
+				data-2480="transform[swing]:scale(.4);"
+				data-3080="transform[swing]:scale(0);"
+				data-3160="transform[swing]:scale(.4);"
+				data-3260="transform[swing]:scale(0);"
+				data-3360="transform[swing]:scale(.4);"
+				data-3460="transform[swing]:scale(0);"
+				data-3480="transform[swing]:scale(.2);"
+				data-3560="transform[swing]:scale(0);"></div>
+			<div class="blue2" 
+				data-0="transform[swing]:scale(0);"
+				data-2500="transform[swing]:scale(.5);"
+				data-3100="transform[swing]:scale(0);"
+				data-3180="transform[swing]:scale(.5);"
+				data-3280="transform[swing]:scale(0);"></div>
+			<div class="blue2" 
+				data-0="transform[swing]:scale(0);"
+				data-2520="transform[swing]:scale(.6);"
+				data-3120="transform[swing]:scale(0);"
+				data-3200="transform[swing]:scale(.6);"
+				data-3300="transform[swing]:scale(0);"></div>
+			<div class="blue2" 
+				data-0="transform[swing]:scale(0);"
+				data-2540="transform[swing]:scale(.7);"
+				data-3140="transform[swing]:scale(0);"
+				data-3220="transform[swing]:scale(.7);"
+				data-3320="transform[swing]:scale(0);"></div>
+			<div class="blue2" 
+				data-0="transform[swing]:scale(0);"
+				data-2560="transform[swing]:scale(.8);"
+				data-3000="transform[swing]:scale(0);"
+				data-3240="transform[swing]:scale(.8);"
+				data-3340="transform[swing]:scale(0);"></div>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+	<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+        $("body").css({
+        	"background-color": "mediumpurple",
+        	"transition": "25s"
+        });
+        $(".orange_shape").css({
+    		"transition": ".5s",
+    		"width": "30px",
+    		"height": "30px",
+        	});
+         $(".orange_shape").css({
+    		"transition": "2s",
+    		"width": "0px",
+    		"height": "0px",
+        	});
+})
+
+
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+	</script>
+
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+</body>
+</html> 
