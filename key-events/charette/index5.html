@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Charette-3</title>
+
+    <style type="text/css">
+	html,body {
+
+    font-family: Arial, 'sans-serif';
+    color:#424242;
+
+  }      
+canvas { 
+        background-color: black;
+        height:100%;
+        width: 100%;
+      }
+      body{
+        height: 100%;
+      }
+  .display {
+    text-align: center;
+    display: table;
+    height:100%;
+    margin:0 auto;
+  }
+
+  p {
+    display: inline-block;
+    position: relative;
+    font-size: 50px; 
+    text-align: center;
+
+  }
+
+    </style>
+  </head>
+  <body onload="draw();">
+     <div class="display">
+    <p>play with the arrow keys</p>
+    </div>
+    <canvas id="gamewrapper"></canvas>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
+})();
+ 
+var canvas = document.getElementById("gamewrapper"),
+    ctx = canvas.getContext("2d"),
+    width = 950,
+    height = 500,
+    player = {
+      x : width/2,
+      y : height - 5,
+      width : 20,
+      height : 20,
+      speed: 6.5,
+      velX: 0,
+      velY: 0,
+      jumping: false,
+    },
+    keys = [],
+    friction = .9,
+    gravity = 0.3;
+ 
+canvas.width = width;
+canvas.height = height;
+ 
+function update(){
+  // check keys
+    if (keys[38] || keys[32]) {
+        // up arrow or space
+      if(!player.jumping){
+       player.jumping = true;
+       player.velY = -player.speed*2;
+      }
+    }
+    if (keys[39]) {
+        // right arrow
+        if (player.velX < player.speed) {             
+            player.velX++;         
+         }     
+    }     
+    if (keys[37]) {         
+        // left arrow         
+        if (player.velX > -player.speed) {
+            player.velX--;
+        }
+    }
+ 
+    player.velX *= friction;
+ 
+    player.velY += gravity;
+ 
+    player.x += player.velX;
+    player.y += player.velY;
+ 
+    if (player.x >= width-player.width) {
+        player.x = width-player.width;
+    } else if (player.x <= 0) {         
+        player.x = 0;     
+    }    
+  
+    if(player.y >= height-player.height){
+        player.y = height - player.height;
+        player.jumping = false;
+    }
+ 
+  ctx.clearRect(0,0,width,height);
+  ctx.fillStyle = "teal";
+  ctx.fillRect(player.x, player.y, player.width, player.height);
+ 
+  requestAnimationFrame(update);
+}
+ 
+document.body.addEventListener("keydown", function(e) {
+    keys[e.keyCode] = true;
+});
+ 
+document.body.addEventListener("keyup", function(e) {
+    keys[e.keyCode] = false;
+});
+ 
+window.addEventListener("load",function(){
+    update();
+});
+
+     </script>
+  </body>
+</html>

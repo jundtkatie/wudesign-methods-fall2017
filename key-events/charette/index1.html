@@ -1,0 +1,76 @@
+<html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<link rel="stylesheet" href="styles.css">
+		<title>Key Events | Charette</title>
+
+<style>
+	html {
+		background-color: black;
+		color: white;
+		font-family: sans-serif;
+	}
+	div.square1 {
+		height: 100px;
+		width: 100px;
+		background-color: coral;
+		display: inline-block;
+		margin: 200px;
+	}
+	div.square2 {
+		height: 100px;
+		width: 100px;
+		background-color: white;
+		display: inline-block;
+		margin: 200px;
+		border-radius: 900px;
+	}
+
+	#search-hits {
+		display:none;
+	}
+	#search-hitss {
+		display:none;
+	}
+
+</style>
+
+</head>
+
+<body> 
+
+<p>press keys 7 and 8</p>
+  
+	<div id="search-hits">
+         <div class="square1"></div>
+	</div>
+
+	<div id="search-hitss">
+         <div class="square2"></div>
+	</div>
+
+
+
+
+<script>
+var window = document.getElementById('search');
+	window.addEventListener('keyup', function(e) {
+        var x = event.which || event.keyCode;
+
+        var searchHits = document.getElementById('search-hits');
+
+        if (x == 55) {
+            searchHits.style.display = 'block';
+        }
+        if (x == 56) {
+            searchHits.style.display = 'none';
+        }
+    });
+
+
+</script>
+
+</body>
+
+</html>

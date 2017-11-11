@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Key Events | Charette</title>
+  <style type="text/css">
+   
+ html, body{
+      background-color: black;
+      color:grey;
+      font-family: sans-serif;
+      margin: 0px auto;
+      padding: 0px;
+      height: 100%;
+      width: 100%;
+		overflow: hidden;
+    }
+
+    div#search-hits{
+      height:110%;
+      width: 110%;
+    }
+
+	div#line1{
+		width: 400px;
+		height: 400px;
+		border-radius: 900px;
+		display: cover;
+		margin: auto;
+		padding: 0;
+
+	}
+	  .display {
+    text-align: center;
+    display: table;
+    height:100%;
+    margin:0 auto;
+  }
+
+  p {
+    display: block;
+    position: fixed;
+    font-size: 50px; 
+    text-align: center;
+
+  }
+  </style>
+
+</head> 
+<body>
+<p>press 1, 2, 3, or 4</p>
+
+  <div id="search-hits" >
+    <div id="line1"></div>
+	<div id="line1"></div>
+
+    
+  </div>
+
+
+
+<script>
+
+var window = document.getElementById('search');
+var count = 1;
+    window.addEventListener('keyup', function(e) {
+        var searchHits = document.getElementById('search-hits');
+        var x = event.which || event.keyCode;
+
+        
+        // if (x == 49) {
+        //     // blocks();
+        //     if (count % 2 === 0){
+        //       searchHits.style.display = 'block'; 
+        //       searchHits.style.backgroundColor = 'yellow';
+        //     }else{
+        //       searchHits.style.backgroundColor = 'pink';
+        //       searchHits.style.display = 'block';
+        //     }
+        //     count = count + 1;
+        // }
+        if (x == 49) {
+           // blocks();
+           if (count % 2 === 0){
+              searchHits.style.backgroundColor = 'red';
+
+            }else{
+              // searchHits.style.display = 'block';
+              searchHits.style.backgroundColor = 'red';
+            }
+            count = count + 1;
+        }
+
+		if (x == 50) {
+           // blocks();
+           if (count % 2 === 0){
+              searchHits.style.backgroundColor = 'tomato';
+
+            }else{
+              // searchHits.style.display = 'block';
+              searchHits.style.backgroundColor = 'tomato';
+            }
+            count = count + 1;
+        }
+
+		if (x == 51) {
+           // blocks();
+           if (count % 2 === 0){
+              searchHits.style.backgroundColor = 'orange';
+
+            }else{
+              // searchHits.style.display = 'block';
+              searchHits.style.backgroundColor = 'orange';
+            }
+            count = count + 1;
+        }
+		
+		if (x == 52) {
+           // blocks();
+           if (count % 2 === 0){
+              searchHits.style.backgroundColor = 'orangered';
+
+            }else{
+              // searchHits.style.display = 'block';
+              searchHits.style.backgroundColor = 'orangered';
+            }
+            count = count + 1;
+        }
+        // if (x == 50) {
+        //    // blocks();
+        //    if (count % 2 === 0){
+        //       one.style.display = 'block'; 
+        //       one.style.backgroundColor = 'pink';
+
+        //     }else{
+        //       // searchHits.style.display = 'block';
+        //       one.style.backgroundColor = 'lime';
+        //       one.style.display = 'block';
+        //     }
+        //     count = count + 1;
+        // }
+
+       
+    });
+
+// function blocks(){
+//   var searchHits = document.getElementById('search-hits');
+
+//    if (count % 2 === 0){
+//               searchHits.style.display = 'none'; 
+//             }else{
+//               searchHits.style.display = 'block';
+//             }
+//             count = count + 1;
+// }
+
+
+</script>
+
+</body>
+</html>

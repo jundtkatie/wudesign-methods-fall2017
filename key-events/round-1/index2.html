@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<title>1 | 2</title>
+
+<style type="text/css">
+	html,body{
+		margin:0;
+		padding: 0;
+		height: 100%;
+		overflow: hidden;
+	}
+	section{
+		height: 100%;
+	}
+
+	div{
+		height: 100%;
+	}
+	#canvas{
+		height: 100%;
+		width:100%;
+		background-color: tomato;
+	}
+	p{
+		position: fixed;
+		color: white;
+	}
+
+</style>
+</head>
+
+<body>
+<section>
+<p> use arrow keys</p>	
+
+<div>
+	<canvas id="canvas">
+	This text is displayed if your browser does not support HTML5 Canvas.
+	</canvas>
+</div>
+
+<script type="text/javascript">
+var canvas;
+var ctx;
+var dx = 5;
+var dy = 5;
+var x = 150;
+var y = 120;
+var WIDTH = 0;
+var HEIGHT = 0;
+
+function circle(x,y,r) {
+ctx.beginPath();
+ctx.arc(x, y, r, 0, Math.PI*2, true);
+ctx.fill();
+}
+
+function rect(x,y,w,h) {
+ctx.beginPath();
+ctx.rect(x,y,w,h);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+}
+
+function clear() {
+ctx.clearRect(0, 0, WIDTH, HEIGHT);
+}
+
+function init() {
+canvas = document.getElementById("canvas");
+ctx = canvas.getContext("2d");
+return setInterval(draw, 10);
+}
+
+function doKeyDown(evt){
+switch (evt.keyCode) {
+case 38:  /* Up arrow was pressed */
+if (y - dy > 0){
+y -= dy;
+}
+break;
+case 40:  /* Down arrow was pressed */
+if (y + dy > HEIGHT){
+y += dy;
+}
+break;
+case 37:  /* Left arrow was pressed */
+if (x - dx > 0){
+x -= dx;
+}
+break;
+case 39:  /* Right arrow was pressed */
+if (x + dx > WIDTH){
+x += dx;
+}
+break;
+}
+}
+
+function draw() {
+clear();
+ctx.fillStyle = "black";
+ctx.strokeStyle = "none";
+rect(0,0,WIDTH,HEIGHT);
+ctx.fillStyle = "red";
+circle(x, y, 1);
+}
+
+init();
+window.addEventListener('keydown',doKeyDown,true);
+</script>
+</section>
+</body>
+</html>

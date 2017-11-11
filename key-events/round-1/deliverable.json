@@ -1,0 +1,44 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "snake variation 1",
+      "file" : "index1.html"
+    },
+    {
+      "name" : "snake variation 2",
+      "file" : "index2.html"
+    },
+    {
+      "name" : "snake variation 3",
+      "file" : "index3.html"
+    },
+    {
+      "name" : "snake variation 4",
+      "file" : "index4.html"
+    },
+    {
+      "name" : "snake variation 5",
+      "file" : "index5.html"
+    },
+    {
+      "name" : "snake variation 6",
+      "file" : "index6.html"
+    },
+    {
+      "name" : "snake variation 7",
+      "file" : "index7.html"
+    },
+    {
+      "name" : "little bouncing guy",
+      "file" : "index8.html"
+    },
+     {
+      "name" : "show the letter pressed",
+      "file" : "index9.html"
+    },
+    {
+      "name" : "random key events",
+      "file" : "index10.html"
+    }
+  ]
+}
