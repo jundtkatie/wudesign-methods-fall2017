@@ -1,10 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+	
 	<title>1 | 6</title>
 
 <style type="text/css">
@@ -30,11 +27,12 @@
 <body>
 <canvas id="canvas" width="650" height="650"></canvas>
 
-</body>
 
-</html>
-
-<script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
 $(document).ready(function(e){
 	//Canvas stuff
 	var canvas = $("#canvas")[0];
@@ -187,13 +185,12 @@ $(document).ready(function(e){
 		else if(key == "39" && d != "left") d = "right";
 		else if(key == "40" && d != "up") d = "down";
 		//The snake is now keyboard controllable
-	})
+	});
 	
 	
-	
-	
-	
-	
-	
-})
+});
 </script>
+
+</body>
+
+</html>
