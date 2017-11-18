@@ -1,0 +1,44 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "Canvas Resizing based on browser width... Abe I need help with this dude.",
+      "file" : "index1.html"
+    },
+    {
+      "name" : "Spacebar = restart",
+      "file" : "index2.html"
+    },
+    {
+      "name" : "HTML background = shift key",
+      "file" : "index3.html"
+    },
+    {
+      "name" : "move food = a",
+      "file" : "index4.html"
+    },
+    {
+      "name" : "HELP: create additional food = s",
+      "file" : "index5.html"
+    },
+    {
+      "name" : "",
+      "file" : "index6.html"
+    },
+    {
+      "name" : "",
+      "file" : "index7.html"
+    },
+    {
+      "name" : "",
+      "file" : "index8.html"
+    },
+     {
+      "name" : "",
+      "file" : "index9.html"
+    },
+    {
+      "name" : "",
+      "file" : "index10.html"
+    }
+  ]
+}
