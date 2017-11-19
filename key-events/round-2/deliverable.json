@@ -1,43 +1,43 @@
 {
   "entrypoints" : [
     {
-      "name" : "Canvas Resizing based on browser width... Abe I need help with this dude.",
+      "name" : "1) Canvas Resizing based on browser width... Abe I need help with this dude.",
       "file" : "index1.html"
     },
     {
-      "name" : "Spacebar = restart",
+      "name" : "2) Spacebar = restart",
       "file" : "index2.html"
     },
     {
-      "name" : "HTML background = shift key",
+      "name" : "3) HTML background = shift key",
       "file" : "index3.html"
     },
     {
-      "name" : "move food = a",
+      "name" : "4) move food = a",
       "file" : "index4.html"
     },
     {
-      "name" : "HELP: create additional food = s",
+      "name" : "5) HELP: create additional food = s",
       "file" : "index5.html"
     },
     {
-      "name" : "",
+      "name" : "6) HELP: each time you lose the game the snake moves faster",
       "file" : "index6.html"
     },
     {
-      "name" : "",
+      "name" : "7) Same problem as #6, but the game responds to f key for speed now",
       "file" : "index7.html"
     },
     {
-      "name" : "",
+      "name" : "8) Added instruction panel = H",
       "file" : "index8.html"
     },
      {
-      "name" : "",
+      "name" : "9) HELP: Can't get the spacebar to actually pause the game",
       "file" : "index9.html"
     },
     {
-      "name" : "",
+      "name" : "10) HELP: wanted to make the snake longer with O key press, but instead O clears the canvas",
       "file" : "index10.html"
     }
   ]
