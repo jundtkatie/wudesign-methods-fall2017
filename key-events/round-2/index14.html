@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>2 | 8</title>
+    <title>2 | 14</title>
 
     <style type="text/css">
     html,body{
@@ -19,9 +19,10 @@
         bottom: 50%;
         left: -50%;
         right: -50%;
+        background-color: black;
     }
     html.shiftkey {
-        background-color: lightyellow;
+        background-color: black;
     }
 </style>
 </head>
@@ -30,15 +31,16 @@
     <canvas id="canvas" width="650" height="650"></canvas>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-    $(document).ready(function(){
+$(document).ready(function(){
     //Canvas stuff
     var canvas = $("#canvas")[0];
     var ctx = canvas.getContext("2d");
     var w = $("#canvas").width();
     var h = $("#canvas").height();
+    var speed = 100;
 
 
     //Lets save the cell width in a variable for easy control
@@ -46,30 +48,7 @@
     var d;
     var food;
     var score;
-    
-    //Lets create the snake now
     var snake_array; //an array of cells to make up the snake
-    
-    $(document).bind("keydown",function(e){
-        if(e.keyCode==13)
-        {
-            location.reload();
-        }
-        else{
-            if(e.keyCode==72){
-                    //this is the help key.'H'
-                    $("<div>Controls: <br/>(UP,RIGHT,DOWN,LEFT)<br>A to move food<br>F to speed up<br>SHIFT to change background<br />Press H to see this again.</div>").appendTo("body").css({
-                        'position':'absolute',
-                        'top':'20%',
-                        'width':'50%',
-                        'left': '40%',
-                        'display': 'none',
-                        'font-family':'monospace',
-                        'font-size': '18px'
-                        }).fadeIn().delay(1000).fadeOut('slow');
-                }
-        }
-    });
 
     function init()
     {
@@ -80,7 +59,7 @@
         score = 0;
         
         if(typeof game_loop != "undefined") clearInterval(game_loop);
-        game_loop = setInterval(paint, 80);
+        game_loop = setInterval(paint, speed);
 
     }
 
@@ -113,9 +92,9 @@
     {
         //To avoid the snake trail we need to paint the BG on every frame
         //Lets paint the canvas now
-        ctx.fillStyle = "lightyellow";
+        // ctx.fillStyle = "lightyellow";
         ctx.fillRect(0, 0, w, h);
-        ctx.strokeStyle = "lightyellow";
+        // ctx.strokeStyle = "lightyellow";
         ctx.strokeRect(0, 0, w, h);
         
         //The movement code for the snake to come here.
@@ -181,16 +160,16 @@
     //Lets first create a generic function to paint cells
     function paint_cell(x, y)
     {
-        ctx.fillStyle = "black";
+        // ctx.fillStyle = "black";
         ctx.fillRect(x*cw, y*cw, cw, cw);
         ctx.strokeStyle = "lightyellow";
         ctx.strokeRect(x*cw, y*cw, cw, cw);
     }
     function paint_food(x, y)
     {
-        ctx.fillStyle = "tomato";
+        // ctx.fillStyle = "tomato";
         ctx.fillRect(x*cw, y*cw, cw, cw);
-        ctx.strokeStyle = "lightyellow";
+        // ctx.strokeStyle = "lightyellow";
         ctx.strokeRect(x*cw, y*cw, cw, cw);
     }
 
@@ -221,51 +200,71 @@
         else if(key == "40" && d != "up") d = "down";
         //The snake is now keyboard controllable
     });
+
     $(document).keydown(function(e){
         var key = e.which;
 
-        //Changes htm background color
+        //SHIFT = Changes htm background color
         var key = e.which;
         if(key == 16) {
             $("html").toggleClass("shiftkey");
         }
 
-        //Moves food to a new spot = a
+        //A = Moves food to a new spot
         var key = e.which;
         if(key == 65) {
             $("#canvas").toggleClass(create_food);
         }
 
-        //speed up = f
-        // var key = e.which;
-        // if(key == 70){
-        //     $(snake_array).keydown()
-        //     {
-        //         var nx = snake_array[0].x;
-        //         var ny = snake_array[0].y;
-                
-        //     }
-        // }
-        
-      });  
-
-        $(document).bind("keydown",function(e){
+        //F = speed up
         var key = e.which;
-        if(key == "70" && snake_array != "[]") snake_array = "[1]";
-        {
-            // var nx = snake_array[0].x;
-            // var ny = snake_array[0].y*5;
-            // snake_array.reload();
+        if(key == "70") {
+            speed = (speed == 100 ? 20 : 100);
+            clearInterval(game_loop);
+            game_loop = setInterval(paint, speed);
         }
 
-        
+        // E = more food
+        // var key = e.which;
+        // if(key == "69") {
+        //     console.log(create_food)
+        // }
 
-    });
-    });
+        //v = change content width
+        var key = e.which;
+        if(key == "86") {
+            cw = (cw == 10 ? 50 : 10);
+            clearInterval(game_loop);
+            game_loop = setInterval(paint, speed);
+        }
 
-</script>
-<!-- // var key = e.which;
-        // if(key == "67" && d ) d = "speed"; -->
+
+    });  
+});
+
+$(document).bind("keydown",function(e){
+        //ENTER = restart
+        if(e.keyCode==13)
+        {
+            location.reload();
+        }
+        else{
+            if(e.keyCode==72){
+                    //H = instructions
+                    $("<div>Controls: <br/>(UP,RIGHT,DOWN,LEFT)<br>A to move food<br>F to speed up<br>SHIFT to change background<br />Press H to see this again.</div>").appendTo("body").css({
+                        'position':'absolute',
+                        'top':'20%',
+                        'width':'50%',
+                        'left': '40%',
+                        'display': 'none',
+                        'font-family':'monospace',
+                        'font-size': '18px'
+                    }).fadeIn().delay(1000).fadeOut('slow');
+                }
+            }
+        });
+
+    </script>
 
 </body>
 

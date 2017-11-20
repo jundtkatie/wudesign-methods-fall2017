@@ -39,6 +39,22 @@
     {
       "name" : "10) HELP: wanted to make the snake longer with O key press, but instead O clears the canvas",
       "file" : "index10.html"
+    },
+    {
+      "name" : "11) F = faster! (all previous key event problems have been resolved)",
+      "file" : "index11.html"
+    },
+    {
+      "name" : "12) The canvas color is now a CSS element... which broke the tail erasure of the snake... which is pretty cool. (also the food stays on the page each time. I think taking the color away also removed the erase canvas at restart part)",
+      "file" : "index12.html"
+    },
+    {
+      "name" : "13) I changed the things that I removed in itteration 12, and it made the stroke color the background color, which I like better, but now the score is gone and the background-color is still not an html element",
+      "file" : "index13.html"
+    },
+    {
+      "name" : "14) More color changes... Now the SHIFT key changes the background to match the canvas again...",
+      "file" : "index14.html"
     }
   ]
 }
