@@ -1,0 +1,44 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "1) Corrected canvas size",
+      "file" : "index1.html"
+    },
+    {
+      "name" : "2) Corrected instruction panel",
+      "file" : "index2.html"
+    },
+    {
+      "name" : "3) All key commands change direction of snake",
+      "file" : "index3.html"
+    },
+    {
+      "name" : "4) letters change direction, numbers change color",
+      "file" : "index4.html"
+    },
+    {
+      "name" : "HELP: 5) All key commands change colors of the game",
+      "file" : "index5.html"
+    },
+    {
+      "name" : "6)",
+      "file" : "index6.html"
+    },
+    {
+      "name" : "7)",
+      "file" : "index7.html"
+    },
+    {
+      "name" : "8)",
+      "file" : "index8.html"
+    },
+     {
+      "name" : "9)",
+      "file" : "index9.html"
+    },
+    {
+      "name" : "10)",
+      "file" : "index10.html"
+    }
+  ]
+}
