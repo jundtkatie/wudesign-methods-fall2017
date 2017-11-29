@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>3 | 5</title>
+	<title>3 | 6</title>
 
 	<style type="text/css">
 	html,body{
@@ -101,38 +101,22 @@
     		x: Math.round(Math.random()*(w-cw)/cw), 
     		y: Math.round(Math.random()*(h-cw)/cw), 
     	};
-        //This will create a cell with x/y between 0-44 -- numbers have changed because canvas is no longer 450x450
-        //Because there are 45(450/10) positions accross the rows and columns
+
     }
     
     //Lets paint the snake now
     function paint()
     {
-        //To avoid the snake trail we need to paint the BG on every frame
-        //Lets paint the canvas now
-        // ctx.fillStyle = "lightyellow";
-        // ctx.fillRect(0, 0, w, h);
-        // ctx.strokeStyle = "lightyellow";
-        // ctx.strokeRect(0, 0, w, h);
-        
-        //The movement code for the snake to come here.
-        //The logic is simple
-        //Pop out the tail cell and place it infront of the head cell
+ 
         var nx = snake_array[0].x;
         var ny = snake_array[0].y;
-        //These were the position of the head cell.
-        //We will increment it to get the new head position
-        //Lets add proper direction based movement now
+
         if(d == "right") nx++;
         else if(d == "left") nx--;
         else if(d == "up") ny--;
         else if(d == "down") ny++;
 
         
-        //Lets add the game over clauses now
-        //This will restart the game if the snake hits the wall
-        //Lets add the code for body collision
-        //Now if the head of the snake bumps into its body, the game will restart
         if(nx == -1 || nx == w/cw || ny == -1 || ny == h/cw || check_collision(nx, ny, snake_array))
         {
             //restart game
@@ -141,10 +125,7 @@
             return;
         }
         
-        //Lets write the code to make the snake eat the food
-        //The logic is simple
-        //If the new head position matches with that of the food,
-        //Create a new head instead of moving the tail
+
         if(nx == food.x && ny == food.y)
         {
         	var tail = {x: nx, y: ny};
@@ -208,7 +189,7 @@
 
 
 
-    //Lets add the keyboard controls now
+//Lets add the keyboard controls now
     $(document).keydown(function(e){
     	var key = e.which;
         //We will add another clause to prevent reverse gear
@@ -220,44 +201,78 @@
 
 
         // Controlling snake direction with all keys
-        if(key == "48") fillLine = "teal", $("#canvas").css({'background-color':'teal'});
-        else if(key == "49") fillLine = "darkseagreen", $("#canvas").css({'background-color':'darkseagreen'});
-        else if(key == "50") fillLine = "olive", $("#canvas").css({'background-color':'olive'});
-        else if(key == "51") fillLine = "mediumaquamarine", $("#canvas").css({'background-color':'mediumaquamarine'});
-        if(key == "52") fillLine = "lightseagreen", $("#canvas").css({'background-color':'lightseagreen'});
-        else if(key == "53") fillLine = "lightgreen", $("#canvas").css({'background-color':'lightgreen'});
-        else if(key == "54") fillLine = "cadetblue", $("#canvas").css({'background-color':'cadetblue'});
-        else if(key == "55") fillLine = "lightstealblue", $("#canvas").css({'background-color':'lightstealblue'});
-        if(key == "56") fillLine = "mediumslateblue", $("#canvas").css({'background-color':'mediumslateblue'});
-        else if(key == "57") fillLine = "white", $("#canvas").css({'background-color':'white'});
+        if(key == "48") fillFood = "palegreen", fillColor = "red", fillLine = "teal", $("#canvas").css({'background-color':'teal'});
+       
+        else if(key == "49") fillFood = "mediumspringgreen", fillColor = "orange", fillLine = "sandybrown", $("#canvas").css({'background-color':'sandybrown'});
+        
+        else if(key == "50") fillFood = "lightgreen", fillColor = "orangered", fillLine = "mediumslateblue", $("#canvas").css({'background-color':'mediumslateblue'});
+        
+        else if(key == "51") fillFood = "chartreuse", fillColor = "tomato", fillLine = "powderblue", $("#canvas").css({'background-color':'powderblue'});
+        
+        if(key == "52") fillFood = "lightseagreen", fillColor = "gold", fillLine = "aquamarine", $("#canvas").css({'background-color':'aquamarine'});
+
+        else if(key == "53") fillFood = "forestgreen", fillColor = "coral", fillLine = "cadetblue", $("#canvas").css({'background-color':'cadetblue'});
+        
+        else if(key == "54") fillFood = "yellowgreen", fillColor = "deeppink", fillLine = "cyan", $("#canvas").css({'background-color':'cyan'});
+        
+        else if(key == "55") fillFood = "mediumaquamarine", fillColor = "lavender", fillLine = "darkseagreen", $("#canvas").css({'background-color':'darkseagreen'});
+       
+        if(key == "56") fillFood = "forestgreen", fillColor = "greenyellow", fillLine = "olive", $("#canvas").css({'background-color':'olive'});
+       
+        else if(key == "57") fillFood = "greenyellow", fillColor = "mediumslateblue", fillLine = "orangered", $("#canvas").css({'background-color':'orangered'});
 
 
-    else if(key == "65") fillColor = "indianred";
-    else if(key == "66") fillColor = "lightcoral";
-    if(key == "67") fillColor = "salmon";
-    else if(key == "68") fillColor = "darksalmon";
-    else if(key == "69") fillColor = "mediumvioletred";
-    else if(key == "70") fillColor = "coral";
-    if(key == "71") fillColor = "tomato";
-    else if(key == "72") fillColor = "orangered";
-    else if(key == "73") fillColor = "darkorange";
-    else if(key == "74") fillColor = "orange";
-    if(key == "75") fillColor = "gold";
-    else if(key == "76") fillFood = "darkred", fillColor = "palegoldenrod";
-    else if(key == "77") fillColor = "khaki";
-    else if(key == "78") fillColor = "darkkhaki";
-    if(key == "79") fillColor = "lavender";
-    else if(key == "80") fillColor = "thistle";
-    else if(key == "81") fillColor = "plum";
-    else if(key == "82") fillColor = "violet";
-    if(key == "83") fillFood = "orange", fillColor = "orchid";
-    else if(key == "84") fillColor = "mediumorchid";
-    else if(key == "85") fillColor = "mediumpurple";
-    else if(key == "86") fillColor = "rebeccapurple";
-    if(key == "87") fillColor = "blueviolet";
-    else if(key == "88") fillColor = "slateblue";
-    else if(key == "89") fillColor = "darkslateblue";
-    else if(key == "90") fillFood = "magenta", fillColor = "mediumslateblue";
+    else if(key == "65") fillFood = "orangered", fillColor = "indianred", fillLine = "white", $("#canvas").css({'background-color':'white'});
+   
+    else if(key == "66") fillColor = "lightcoral", fillFood = "mediumaquamarine", fillLine = "white", $("#canvas").css({'background-color':'white'});
+
+    if(key == "67") fillColor = "salmon", fillFood = "blueviolet", fillLine = "white", $("#canvas").css({'background-color':'white'});
+    
+    else if(key == "68") fillColor = "darksalmon", fillFood = "mediumorchid", fillLine = "lightgoldenrodyellow", $("#canvas").css({'background-color':'lightgoldenrodyellow'});
+    
+    else if(key == "69") fillColor = "mediumvioletred", fillFood = "palevioletred", fillLine = "rebeccapurple", $("#canvas").css({'background-color':'rebeccapurple'});
+    
+    else if(key == "70") fillColor = "coral", fillFood = "limegreen", fillLine = "mediumturquoise", $("#canvas").css({'background-color':'mediumturquoise'});
+    
+    if(key == "71") fillColor = "tomato", fillFood = "midnightblue", fillLine = "white", $("#canvas").css({'background-color':'white'});
+    
+    else if(key == "72") fillColor = "orangered", fillFood = "brown", fillLine = "mediumslateblue", $("#canvas").css({'background-color':'mediumslateblue'});
+    
+    else if(key == "73") fillColor = "darkorange", fillFood = "whitesmoke", fillLine = "ghostwhite", $("#canvas").css({'background-color':'ghostwhite'});
+    
+    else if(key == "74") fillColor = "orange", fillFood = "cornflowerblue", fillLine = "white", $("#canvas").css({'background-color':'white'});
+    
+    if(key == "75") fillColor = "gold", fillFood = "powderblue", fillLine = "ghostwhite", $("#canvas").css({'background-color':'ghostwhite'});
+    
+    else if(key == "76") fillFood = "darkred", fillColor = "palegoldenrod", fillLine = "ghostwhite", $("#canvas").css({'background-color':'ghostwhite'});
+    
+    else if(key == "77") fillColor = "khaki", fillFood = "purple", fillLine = "plum", $("#canvas").css({'background-color':'plum'});
+    
+    else if(key == "78") fillColor = "darkkhaki", fillFood = "thistle", fillLine = "violet", $("#canvas").css({'background-color':'violet'});
+    
+    if(key == "79") fillColor = "lavender", fillFood = "violet", fillLine = "peachpuff", $("#canvas").css({'background-color':'peachpuff'});
+    
+    else if(key == "80") fillColor = "thistle", fillFood = "tomato", fillLine = "darkred", $("#canvas").css({'background-color':'darkred'});
+    
+    else if(key == "81") fillColor = "plum", fillFood = "powderblue", fillLine = "lightsteelblue", $("#canvas").css({'background-color':'lightsteelblue'});
+    
+    else if(key == "82") fillColor = "violet", fillFood = "aquamarine", fillLine = "lightcyan", $("#canvas").css({'background-color':'lightcyan'});
+    
+    if(key == "83") fillFood = "orange", fillColor = "orchid", fillLine = "cadetblue", $("#canvas").css({'background-color':'cadetblue'});
+    
+    else if(key == "84") fillColor = "mediumorchid", fillFood = "darkcyan", fillLine = "lightgreen", $("#canvas").css({'background-color':'lightgreen'});
+    
+    else if(key == "85") fillColor = "mediumpurple", fillFood = "orangered", fillLine = "mediumpurple", $("#canvas").css({'background-color':'mediumpurple'});
+    
+    else if(key == "86") fillColor = "rebeccapurple", fillFood = "moccasin", fillLine = "plum", $("#canvas").css({'background-color':'plum'});
+    
+    if(key == "87") fillColor = "blueviolet", fillFood = "lightgreen", fillLine = "lavender", $("#canvas").css({'background-color':'lavender'});
+    
+    else if(key == "88") fillColor = "slateblue", fillFood = "darkcyan", fillLine = "lemonchiffon", $("#canvas").css({'background-color':'lemonchiffon'});
+    
+    else if(key == "89") fillColor = "darkslateblue", fillFood = "yellow", fillLine = "palevioletred", $("#canvas").css({'background-color':'palevioletred'});
+    
+    else if(key == "90") fillFood = "magenta", fillColor = "mediumslateblue", fillLine = "mediumvioletred", $("#canvas").css({'background-color':'mediumvioletred'});
 });
 
 

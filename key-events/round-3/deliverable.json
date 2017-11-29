@@ -17,27 +17,27 @@
       "file" : "index4.html"
     },
     {
-      "name" : "HELP: 5) All key commands change colors of the game",
+      "name" : "5) All key commands change colors of the game",
       "file" : "index5.html"
     },
     {
-      "name" : "6)",
+      "name" : "6) re-structured to combine effects for key events",
       "file" : "index6.html"
     },
     {
-      "name" : "7)",
+      "name" : "7) direction changes with every key",
       "file" : "index7.html"
     },
     {
-      "name" : "8)",
+      "name" : "8) Added automatic interval steering",
       "file" : "index8.html"
     },
      {
-      "name" : "9)",
+      "name" : "9) Removed fill line feature, changed visual aesthetic",
       "file" : "index9.html"
     },
     {
-      "name" : "10)",
+      "name" : "10) CHECK IT OUT (I'm super stoked about this one, guys)",
       "file" : "index10.html"
     }
   ]
